@@ -1,0 +1,38 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/images/icon.png",
+                "type": "image",
+                "key": "icon"
+            },
+            {
+                "url": "assets/sprites/loading.png",
+                "type": "image",
+                "key": "loading"
+            },
+            {
+                "url": "assets/images/loadingBorder.png",
+                "type": "image",
+                "key": "loadingBorder"
+            },
+            {
+                "url": "assets/scenes/Preloader.js",
+                "type": "sceneFile",
+                "key": "Preloader"
+            },
+            {
+                "url": "assets/images/weveanaLogo.png",
+                "type": "image",
+                "key": "weveanaLogo"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

@@ -1,0 +1,71 @@
+{
+    "id": "80abb39c-5473-44cf-bfb3-11f159db7bbd",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadMethodName": "editorPreload",
+        "preloadPackFiles": [
+            "SunnyLand-Demo/assets/asset-pack.json"
+        ],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Preloader",
+        "borderWidth": 288,
+        "borderHeight": 192
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "c2d6e7e9-85ca-49f3-b46b-435524dc83d8",
+            "label": "loading",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "loading"
+            },
+            "x": 144,
+            "y": 96
+        },
+        {
+            "type": "Sprite",
+            "id": "e9e0db46-dca5-4373-a48b-c164d7689bb0",
+            "label": "weveanaLogo",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "weveanaLogo"
+            },
+            "x": 147,
+            "y": 70
+        },
+        {
+            "type": "Sprite",
+            "id": "b7ef0d5c-7e8b-4bd8-b56a-e9756bb214fc",
+            "label": "sBLogo",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "icon"
+            },
+            "x": 231,
+            "y": 247
+        },
+        {
+            "type": "Sprite",
+            "id": "72f290d9-546b-455d-b05b-5768f93db3d8",
+            "label": "loadingBorder",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "loadingBorder"
+            },
+            "x": 15,
+            "y": 248
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

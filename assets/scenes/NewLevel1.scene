@@ -1,0 +1,343 @@
+{
+    "id": "d9685b8e-e01f-4c31-b06d-60f70d3bf4a5",
+    "sceneType": "SCENE",
+    "settings": {
+        "snapWidth": 32,
+        "snapHeight": 32,
+        "superClassName": "BaseScene",
+        "preloadPackFiles": [
+            "Super-Bravo-Rune/assets/NewLevel1Pack.json"
+        ],
+        "createMethodName": "editorCreate",
+        "sceneKey": "NewLevel1",
+        "borderWidth": 320,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "bd618ef4-f589-480a-9a9a-c6abdeb6f3b0",
+            "label": "bg1Tile",
+            "scope": "CLASS",
+            "texture": {
+                "key": "bg1Tile"
+            },
+            "originX": 0,
+            "originY": 0
+        },
+        {
+            "type": "TileSprite",
+            "id": "64af4b89-0cec-4f39-b2d9-5efd86f69384",
+            "label": "tilespriteBG",
+            "scope": "CLASS",
+            "components": [
+                "FixedToCamera"
+            ],
+            "texture": {
+                "key": "bg1TileBG"
+            },
+            "originX": 0,
+            "originY": 1,
+            "width": 64,
+            "height": 64
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "2b3ef598-d6d0-4054-99ae-75aa4ee34ba4",
+            "label": "nocollide",
+            "tilemapId": "789cac58-208c-417a-b246-de816f76f7e8",
+            "layerName": "nocollide2",
+            "tilesets": [
+                "new_ciudad_tiles"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "569a3f27-49b9-4293-bd22-f7ed2054b90d",
+            "label": "nocollide_1",
+            "tilemapId": "789cac58-208c-417a-b246-de816f76f7e8",
+            "layerName": "nocollide",
+            "tilesets": [
+                "new_ciudad_tiles"
+            ]
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "28e88094-2e0d-404f-9537-73789b206bcf",
+            "label": "layer",
+            "scope": "CLASS",
+            "tilemapId": "789cac58-208c-417a-b246-de816f76f7e8",
+            "layerName": "layer",
+            "tilesets": [
+                "new_ciudad_tiles"
+            ]
+        },
+        {
+            "prefabId": "2bdd30b0-e379-4943-9d6b-ed6cb2ba5b0a",
+            "id": "d2800736-9db9-492e-85d2-5b568e6c820d",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "player",
+            "scope": "CLASS",
+            "x": 113,
+            "y": 723
+        },
+        {
+            "prefabId": "dae0c595-f7aa-48e4-92ff-be93ff062d2a",
+            "id": "9fd51b10-129a-4096-abe6-410b95f900f7",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY"
+            ],
+            "label": "blobber",
+            "x": 553,
+            "y": 687,
+            "scaleX": 0.8472708286847896,
+            "scaleY": 0.8472708286847896
+        },
+        {
+            "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
+            "id": "dd4226da-b81b-4ce3-af7c-7a992560c4cc",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "heart",
+            "x": 961,
+            "y": 593
+        },
+        {
+            "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
+            "id": "ccb2a04e-3a79-4dec-a508-3a15ec3b2a2f",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "sampoShooter",
+            "x": 1205,
+            "y": 361
+        },
+        {
+            "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
+            "id": "2fd6dd3d-75c7-47cb-a54e-9c9ff6dba26c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "sampoShooter_1",
+            "x": 1289,
+            "y": 374
+        },
+        {
+            "prefabId": "cc949b38-84bf-4263-8fd9-a89f002c7681",
+            "id": "9b91ce29-5009-4d30-8f69-b0f15f90f4ff",
+            "unlock": [
+                "x",
+                "y",
+                "angle"
+            ],
+            "label": "spikeHorizontal",
+            "x": 46,
+            "y": 237,
+            "angle": 0
+        },
+        {
+            "prefabId": "dae0c595-f7aa-48e4-92ff-be93ff062d2a",
+            "id": "51da60c9-b617-4bf9-b583-e0daab5842c3",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY"
+            ],
+            "label": "blobber_1",
+            "x": 1169,
+            "y": 687,
+            "scaleX": 0.8472708286847896,
+            "scaleY": 0.8472708286847896
+        },
+        {
+            "type": "Image",
+            "id": "275d680e-e1f2-46c2-9dcd-444e8cabf395",
+            "label": "wallLight",
+            "texture": {
+                "key": "wallLight"
+            },
+            "x": 962,
+            "y": 716
+        },
+        {
+            "type": "Image",
+            "id": "62997e57-3015-44a8-b09d-f27ad89b51e4",
+            "label": "lightBean",
+            "texture": {
+                "key": "lightBean"
+            },
+            "x": 962,
+            "y": 715
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "2a197987-c619-4f21-a67f-4d3ced79444f",
+            "label": "upperTile",
+            "scope": "CLASS",
+            "tilemapId": "46a1e2a0-f605-478a-b471-d2844d657829",
+            "layerName": "upperTile",
+            "tilesets": [
+                "new_ciudad_tiles"
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "3e6ebf6f-a546-4487-a988-599acda4cf78",
+            "label": "tutiSupa1",
+            "texture": {
+                "key": "tutiSupa1"
+            },
+            "x": 128,
+            "y": 593,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Image",
+            "id": "5e9ad498-dc86-42de-b28b-4aef361d3ad4",
+            "label": "tutiSupa2",
+            "texture": {
+                "key": "tutiSupa2"
+            },
+            "x": 776,
+            "y": 590,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Image",
+            "id": "2710e242-4abf-4978-a97d-41ec3651b19a",
+            "label": "tutiSupa3",
+            "texture": {
+                "key": "tutiSupa3"
+            },
+            "x": 1143,
+            "y": 593,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Image",
+            "id": "7b80c6a1-3e8e-4c7a-9206-93dcaab8918e",
+            "label": "tutiSupa4",
+            "texture": {
+                "key": "tutiSupa4"
+            },
+            "x": 1148,
+            "y": 226,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Image",
+            "id": "3425080f-06dd-4b1c-87a3-1d1c3d1996e3",
+            "label": "tutiSupa5",
+            "texture": {
+                "key": "tutiSupa5"
+            },
+            "x": 533,
+            "y": 590,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Image",
+            "id": "f84bbd8f-3173-41f5-abc7-b190c07be370",
+            "label": "tutiSupa6",
+            "texture": {
+                "key": "tutiSupa6"
+            },
+            "x": 308,
+            "y": 717,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "789cac58-208c-417a-b246-de816f76f7e8",
+            "type": "Tilemap",
+            "label": "mapa",
+            "key": "new_level1",
+            "tilesets": [
+                {
+                    "name": "new_ciudad_tiles",
+                    "imageKey": "new_ciudad_tiles"
+                }
+            ]
+        },
+        {
+            "id": "46a1e2a0-f605-478a-b471-d2844d657829",
+            "type": "Tilemap",
+            "label": "new_level1",
+            "key": "new_level1",
+            "tilesets": [
+                {
+                    "name": "new_ciudad_tiles",
+                    "imageKey": "new_ciudad_tiles"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "lists": [
+        {
+            "id": "0e080d9c-0b39-4755-a5d5-57ae5501d356",
+            "label": "doors"
+        },
+        {
+            "id": "a5839e13-79a6-473b-b910-924096033370",
+            "label": "switches",
+            "objectIds": [
+                "9a1b8a13-4e2f-4e74-9b76-aacfaf3b136f"
+            ]
+        },
+        {
+            "id": "5b8b5385-7170-4f04-8368-32349b8524e7",
+            "label": "enemies",
+            "objectIds": [
+                "9fd51b10-129a-4096-abe6-410b95f900f7",
+                "2fd6dd3d-75c7-47cb-a54e-9c9ff6dba26c",
+                "ccb2a04e-3a79-4dec-a508-3a15ec3b2a2f",
+                "9b91ce29-5009-4d30-8f69-b0f15f90f4ff",
+                "51da60c9-b617-4bf9-b583-e0daab5842c3"
+            ]
+        },
+        {
+            "id": "162e2fe2-38a7-450b-88ec-186b241d78cc",
+            "label": "platforms"
+        },
+        {
+            "id": "9ebda1ea-a3d2-410b-b328-4358561cbdf7",
+            "label": "coins"
+        },
+        {
+            "id": "b383c0e6-a04f-4afa-b7ac-20a74e4cbe4c",
+            "label": "catapultas"
+        },
+        {
+            "id": "c178e26c-494b-4400-b756-424719a97c29",
+            "label": "revivingPods"
+        },
+        {
+            "id": "31eff47d-130c-4018-bf6a-df9ab7135d98",
+            "label": "tutorials"
+        }
+    ]
+}

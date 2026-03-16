@@ -1,0 +1,34 @@
+{
+    "id": "0d59cef2-f081-4923-8afd-87525c1c300f",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "1e1d569e-f0d0-49dd-8e3f-1276c7b16cb5",
+            "label": "supaWalkAnim",
+            "components": [
+                "StartAnimation",
+                "FixedToCamera"
+            ],
+            "StartAnimation.animationKey": "supaWalkAnim",
+            "texture": {
+                "key": "tutorials",
+                "frame": "walk instancia 10000"
+            }
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

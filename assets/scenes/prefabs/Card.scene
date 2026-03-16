@@ -1,0 +1,46 @@
+{
+    "id": "990c1d28-45db-4edc-a374-8720ae900806",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "acbdf5fb-afb9-4b03-be4b-6b6ab1931ce9",
+            "label": "card_instancia_10000",
+            "components": [
+                "Physics",
+                "StartAnimation"
+            ],
+            "StartAnimation.animationKey": "smallcard",
+            "texture": {
+                "key": "newSupaAnimationsRune2",
+                "frame": "card instancia 10000"
+            }
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "timeExpires",
+            "label": "timeExpires",
+            "tooltip": "timeExpires",
+            "defValue": 4000,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        }
+    ]
+}
