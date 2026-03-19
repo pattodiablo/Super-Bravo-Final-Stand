@@ -13,7 +13,7 @@ class AngrySpin extends Phaser.GameObjects.Sprite {
 		thisStartAnimation.animationKey = "caminaEspin";
 		
 		/* START-USER-CTR-CODE */
-	
+			const thisPhysics = new Physics(this);
 		this.scene.events.on("create", () => this.create());
 			this.createEvent =	this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
 
