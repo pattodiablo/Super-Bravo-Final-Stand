@@ -44,6 +44,8 @@ class BaseScene extends Phaser.Scene {
 		this.sideDoors = [];
 		this.tolls = [];
 		this.finalBossActiveParts = [];
+		this.speedTiles = [];
+		this.activeFirstPortalCannon = null;
 		
 	
 	}
@@ -71,6 +73,7 @@ class BaseScene extends Phaser.Scene {
 		this.portalCannons = [];
 		this.emptyWallsRack = [];
 		this.acidWallsRack = [];
+		this.speedTilesRack = [];
 		this.wasMusicLaunched = false;
 		this.coinsCollected=0;
 		this.coinsValue=30;
@@ -97,6 +100,7 @@ class BaseScene extends Phaser.Scene {
 		this.createCoins();
 		this.createEmptyWalls();
 		this.createAcidWalls();
+		this.createSpeedTiles();
 		this.createDownFloors();
 		this.createLockedTiles();
 	
@@ -129,7 +133,7 @@ class BaseScene extends Phaser.Scene {
 		
 			this.tilespriteBG.width= this.layer.width;
 			this.tilespriteBG.height=this.layer.height;
-			this.tilespriteBG.setOrigin(0.5,0.5);
+		//	this.tilespriteBG.setOrigin(0.5,0.5);
 		}
 		//MUSIC
 		this.superbravo_gameplay_chip01 = this.sound.add('superbravo_gameplay_chip01');
@@ -1190,6 +1194,23 @@ class BaseScene extends Phaser.Scene {
 		
 	}
 
+		createSpeedTiles(){
+	
+		
+
+		this.speedTiles.forEach(function(wall) {
+			
+			const speedTile = new SpeedTile(this, wall[0], wall[1]);
+
+			this.add.existing(speedTile);
+			this.speedTilesRack.push(speedTile);
+			
+
+		},this);
+		
+	}
+
+
 
 	createDownFloors(){
 	
@@ -1368,6 +1389,18 @@ class BaseScene extends Phaser.Scene {
 
 					
 				}
+
+				if(tileOnly.properties.name=="speedClimb"){
+								
+					
+					var tilePos = [ tileOnly.x*tileOnly.width,tileOnly.y*tileOnly.height];
+					this.speedTiles.push(tilePos);					
+					tileOnly.tilemapLayer.removeTileAt(tileOnly.x,tileOnly.y);
+
+					
+				}
+
+
 
 				
 				if(tileOnly.properties.name=="downFloor"){

@@ -1090,6 +1090,11 @@
                 "key": "new_ciudad_tiles"
             },
             {
+                "url": "assets/images/newBg1.png",
+                "type": "image",
+                "key": "newBg1"
+            },
+            {
                 "url": "assets/newPropsAnimations.json",
                 "type": "animation",
                 "key": "newPropsAnimations"
@@ -1209,11 +1214,6 @@
                 "url": "assets/images/PowerPodium.png",
                 "type": "image",
                 "key": "PowerPodium"
-            },
-            {
-                "url": "assets/images/powersPanel.png",
-                "type": "image",
-                "key": "powersPanel"
             },
             {
                 "url": "assets/propAnimations.json",
@@ -1367,6 +1367,16 @@
                 ],
                 "type": "scripts",
                 "key": "SmallDoor"
+            },
+            {
+                "url": "assets/images/SpeedTile.png",
+                "type": "image",
+                "key": "SpeedTile"
+            },
+            {
+                "url": "assets/scenes/SpeedTile.js",
+                "type": "script",
+                "key": "SpeedTile_1"
             },
             {
                 "atlasURL": "assets/atlas/spike.json",
@@ -1746,56 +1756,6 @@
                 "url": "assets/images/tutiSupa8.png",
                 "type": "image",
                 "key": "tutiSupa8"
-            },
-            {
-                "url": "assets/images/1x/tuto1.png",
-                "type": "image",
-                "key": "tuto1"
-            },
-            {
-                "url": "assets/images/1x/tuto10.png",
-                "type": "image",
-                "key": "tuto10"
-            },
-            {
-                "url": "assets/images/1x/tuto2.png",
-                "type": "image",
-                "key": "tuto2"
-            },
-            {
-                "url": "assets/images/1x/tuto3.png",
-                "type": "image",
-                "key": "tuto3"
-            },
-            {
-                "url": "assets/images/1x/tuto4.png",
-                "type": "image",
-                "key": "tuto4"
-            },
-            {
-                "url": "assets/images/1x/tuto5.png",
-                "type": "image",
-                "key": "tuto5"
-            },
-            {
-                "url": "assets/images/1x/tuto6.png",
-                "type": "image",
-                "key": "tuto6"
-            },
-            {
-                "url": "assets/images/1x/tuto7.png",
-                "type": "image",
-                "key": "tuto7"
-            },
-            {
-                "url": "assets/images/1x/tuto8.png",
-                "type": "image",
-                "key": "tuto8"
-            },
-            {
-                "url": "assets/images/1x/tuto9.png",
-                "type": "image",
-                "key": "tuto9"
             },
             {
                 "url": "tutorialAnimations.json",

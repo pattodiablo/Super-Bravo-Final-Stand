@@ -184,7 +184,7 @@ window.addEventListener('load', function () {
 			pixelArt: false
 		},
 		input: {
-			activePointers: 1
+			activePointers: 3
 		}
 	});
 	

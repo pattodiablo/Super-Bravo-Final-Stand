@@ -24,10 +24,16 @@ class PortalCannon extends Phaser.GameObjects.Sprite {
 	/** @type {boolean} */
 	IsFirstCannon = false;
 
+	/** @type {boolean} */
+	isPlayerTouching = false;
+
 	/* START-USER-CODE */
 
 	create(){
-
+		
+		if(this.IsFirstCannon){
+			this.scene.physics.add.overlap(this.scene.player, this, this.checkCollision, null, this);
+		}
 		this.setDepth(this.scene.player.depth+1);
 
 		this.isRotationActive =  false;
@@ -100,18 +106,30 @@ class PortalCannon extends Phaser.GameObjects.Sprite {
 			this.ring.visible=false;
 			this.ring.parentCanon = this;	
 
-			this.body.innmovale = true;
+			this.body.immovable = true;
 			this.scene.portalCannons.push(this);
 	}
 
+	checkCollision(player, cannon){
+			if(!player){
+			return;
+		}
 
+		this.isPlayerTouching = true;
+		this.scene.player.isCannonNearby = true;
+		
+		if(this.IsFirstCannon && this.scene.activeFirstPortalCannon !== this){
+			this.scene.activeFirstPortalCannon = this;
+		}
+	}
+	
 
 	update(){
 
 		this.distanceToPlayer = Phaser.Math.Distance.Between(this.scene.player.x, this.scene.player.y, this.x, this.y);
 		
 		if(this.IsFirstCannon){
-			if(this.distanceToPlayer <=150){
+			if(this.distanceToPlayer <=50){
 
 				this.scene.player.isCannonNearby = true;
 

@@ -97,7 +97,7 @@ class Player extends Phaser.GameObjects.Sprite {
 		this.coins = 80;
 		this.supaRollsChances = 0;
 		this.playerLife = 10;
-		this.maxVelorunning = 200;
+		this.maxVelorunning = 230;
 		this.maxVelowalking = 150;
 		this.bulletdir = 1;
 		this.willEnterdoor = false;
@@ -173,6 +173,7 @@ class Player extends Phaser.GameObjects.Sprite {
 		this.KeyBoardPowerY=0;
 		this.body.setDragX(900); //frenar drag
 		this.tryToKeyboardJump=false;
+		this.canTriggerDrop = true;
 
 		var spaceBar = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
@@ -181,13 +182,20 @@ class Player extends Phaser.GameObjects.Sprite {
 		var downKey = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
 
 		downKey.on('down', this.wannaGoDown, this)
+		downKey.on('up', this.resetDropIntent, this);
+		this.keys.down.on('up', this.resetDropIntent, this);
 
 	// ...dentro de create()
-this.shiftKey = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SHIFT);
-this.jumpKeyPressed = false;
+	this.jumpKeyPressed = false;
 	}
 
 	wannaGoDown(){
+		if (!this.jumping || !this.canTriggerDrop) {
+			return;
+		}
+
+		this.canTriggerDrop = false;
+
 		if (this.jumping) {
 	
 			this.KeyBoardPowerY = -200;
@@ -200,44 +208,40 @@ this.jumpKeyPressed = false;
 			}
 	}
 
+	resetDropIntent(){
+		this.canTriggerDrop = true;
+	}
+
 	spaceBarIsDown(){
 
-	
-			if (!this.jumping) {
-				//saltando jump saltar
-			   //console.log("inside jumping")
-			   this.wannaLaunch = false;
-			   this.KeyBoardPowerY = 200;
-			   this.DirY = 1
-			   this.wannaJump = true;
-			   this.wasOnPlatform = false;
-			   this.isClimbing = false;
-			
-
-		   }else if (this.jumping) {
-	
+		if (!this.jumping) {
+			this.wannaLaunch = false;
 			this.KeyBoardPowerY = 200;
-			this.wannaJump = false;
+			this.DirY = 1;
+			this.wannaJump = true;
+			this.wasOnPlatform = false;
+			this.isClimbing = false;
 
-		
+	   }
+	   else if (this.jumping) {
 
-			if ( this.KeyBoardPowerY >= 40 && this.supaDJumps > 0 && !this.isDJumping) {
-				// console.log('quiero dobuble saltar');
-				this.wannaDoubleJump = true;
-				//this.supaDJumps--;
-				if (this.supaDJumps <= 0) {
-					this.supaDJumps = 0;
-				}
+		this.KeyBoardPowerY = 200;
+		this.wannaJump = false;
 
+		if ( this.KeyBoardPowerY >= 40 && this.supaDJumps > 0 && !this.isDJumping) {
+			this.wannaDoubleJump = true;
+			if (this.supaDJumps <= 0) {
+				this.supaDJumps = 0;
 			}
+
 		}
+	}
 		
 		
 	}
 
-enableKeyBoard() {
-    const shiftMultiplier = this.shiftKey.isDown ? (this.maxVelorunning / this.maxVelowalking) : 1;
-    const maxVelo = this.maxVelowalking * shiftMultiplier;
+	enableKeyBoard() {
+	const maxVelo = this.maxVelorunning;
 
     if (this.cursors.left.isDown || this.keys.left.isDown) {
         this.body.setVelocityX(-maxVelo);
@@ -251,7 +255,7 @@ enableKeyBoard() {
 
     // --- Salto solo una vez por pulsación ---
     const jumpKeyDown = this.cursors.up.isDown || this.keys.up.isDown;
-    if (jumpKeyDown && !this.jumpKeyPressed && !this.jumping) {
+	if (jumpKeyDown && !this.jumpKeyPressed) {
         this.spaceBarIsDown();
         this.jumpKeyPressed = true;
     }
@@ -309,8 +313,6 @@ enableKeyBoard() {
 		}
 
 	}
-
-
 
 	createCoins(){
 		this.enemyCoins = [];
@@ -485,7 +487,6 @@ enableKeyBoard() {
 	}
 
 	mouseMove(pointer) {
-	
 	}
 
 	mouseClickDown(pointer) {
@@ -1591,7 +1592,7 @@ this.scene.game.playerData.life = this.playerLife;
 	
 
 	
-		if (this.isDropping) {
+		if (this.isDropping && this.body.velocity.y > 0) {
 		//	console.log(enemy)
 			if(typeof enemy!=="undefined"){
 
@@ -1602,6 +1603,7 @@ this.scene.game.playerData.life = this.playerLife;
 					enemy.body.enable = false;
 					
 					if(enemy.name !=="AcidTile" && enemy.name !=="drone" ){
+						
 						enemy.destroySequence();
 					}
 				}

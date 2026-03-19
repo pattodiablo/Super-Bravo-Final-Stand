@@ -28,6 +28,10 @@ class SupaBiteBtn extends Phaser.GameObjects.Sprite {
 		this.OriginalX = this.x;
 		this.OriginalY = this.y;
 		this.isOnScreen=false;
+		this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.autoTriggerOnFirstCannon, this);
+		this.once(Phaser.GameObjects.Events.DESTROY, () => {
+			this.scene.events.off(Phaser.Scenes.Events.UPDATE, this.autoTriggerOnFirstCannon, this);
+		});
 		
 		this.downKey = this.scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.ENTER);
 		this.downKey.on('down', function(){
@@ -50,6 +54,20 @@ class SupaBiteBtn extends Phaser.GameObjects.Sprite {
 		
 		});
 
+	}
+
+	autoTriggerOnFirstCannon(){
+
+		if(!this.isActive){
+			return;
+		}
+
+		const activeCannon = this.scene.activeFirstPortalCannon;
+		if(!activeCannon || !activeCannon.isPlayerTouching){
+			return;
+		}
+
+		this.enablePower();
 	}
 
 
