@@ -50,10 +50,7 @@ class BaseScene extends Phaser.Scene {
 	
 	}
 
-	preload(){
-
-		this.load.pack("pack", "assets/late-asset-pack.json");
-	}
+	
 
 
 	create(){
