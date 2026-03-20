@@ -42,29 +42,9 @@
                 "key": "bg1Tile"
             },
             {
-                "url": "assets/images/bg1TileBG.png",
-                "type": "image",
-                "key": "bg1TileBG"
-            },
-            {
                 "url": "assets/images/bg2Tile.png",
                 "type": "image",
                 "key": "bg2Tile"
-            },
-            {
-                "url": "assets/images/bg2TileBG.png",
-                "type": "image",
-                "key": "bg2TileBG"
-            },
-            {
-                "url": "assets/images/bg3TileBG.png",
-                "type": "image",
-                "key": "bg3TileBG"
-            },
-            {
-                "url": "assets/images/big box.png",
-                "type": "image",
-                "key": "big box"
             },
             {
                 "url": [
@@ -273,11 +253,6 @@
                 "key": "Catapulta"
             },
             {
-                "url": "assets/images/closeBtn.png",
-                "type": "image",
-                "key": "closeBtn"
-            },
-            {
                 "url": [
                     "assets/scenes/prefabs/CloseBtn.js"
                 ],
@@ -434,41 +409,11 @@
                 "key": "EnemyHead"
             },
             {
-                "url": "assets/images/energyPanel.png",
-                "type": "image",
-                "key": "energyPanel"
-            },
-            {
                 "url": [
                     "assets/scenes/prefabs/EnergyPanel.js"
                 ],
                 "type": "scripts",
                 "key": "EnergyPanel"
-            },
-            {
-                "url": "assets/images/energyPanel_cannonStrike.png",
-                "type": "image",
-                "key": "energyPanel_cannonStrike"
-            },
-            {
-                "url": "assets/images/energyPanel_doubleJump.png",
-                "type": "image",
-                "key": "energyPanel_doubleJump"
-            },
-            {
-                "url": "assets/images/energyPanel_jetpack.png",
-                "type": "image",
-                "key": "energyPanel_jetpack"
-            },
-            {
-                "url": "assets/images/energyPanel_selector.png",
-                "type": "image",
-                "key": "energyPanel_selector"
-            },
-            {
-                "url": "assets/images/energyRode.png",
-                "type": "image",
-                "key": "energyRode"
             },
             {
                 "url": [
@@ -848,11 +793,6 @@
                 "key": "FuelBar"
             },
             {
-                "url": "assets/images/fuelBarFrame.png",
-                "type": "image",
-                "key": "fuelBarFrame"
-            },
-            {
                 "url": [
                     "assets/scenes/prefabs/GotoLevelWall.js"
                 ],
@@ -912,25 +852,6 @@
                 "key": "HeartBtn"
             },
             {
-                "url": "assets/images/info.png",
-                "type": "image",
-                "key": "info"
-            },
-            {
-                "url": [
-                    "assets/scenes/prefabs/InfoBG.js"
-                ],
-                "type": "scripts",
-                "key": "InfoBG"
-            },
-            {
-                "url": [
-                    "assets/scenes/prefabs/infoButton.js"
-                ],
-                "type": "scripts",
-                "key": "infoButton"
-            },
-            {
                 "url": "assets/scenes/InterludeMap.js",
                 "type": "sceneFile",
                 "key": "InterludeMap"
@@ -946,16 +867,6 @@
                 "url": "assets/images/lifeBar.png",
                 "type": "image",
                 "key": "lifeBar"
-            },
-            {
-                "url": "assets/images/lifeBarfill.png",
-                "type": "image",
-                "key": "lifeBarfill"
-            },
-            {
-                "url": "assets/images/lifeBarfillBg.png",
-                "type": "image",
-                "key": "lifeBarfillBg"
             },
             {
                 "url": "assets/images/lifepanel.png",
@@ -1784,11 +1695,6 @@
                 ],
                 "type": "scripts",
                 "key": "UpgradeHalo"
-            },
-            {
-                "url": "assets/sprites/wall.png",
-                "type": "image",
-                "key": "wall"
             },
             {
                 "url": [

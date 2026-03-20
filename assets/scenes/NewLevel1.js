@@ -95,6 +95,10 @@ class NewLevel1 extends BaseScene {
 		hand.scaleY = -1;
 		hand.angle = -124;
 
+		// lightBeam
+		const lightBeam = new LightBeam(this, 930, 640);
+		this.add.existing(lightBeam);
+
 		// lists
 		const doors = [];
 		const switches = [];

@@ -198,6 +198,17 @@
             "y": 701,
             "scaleY": -1,
             "angle": -124
+        },
+        {
+            "prefabId": "61c1e748-4eae-419c-9015-d72902ae7e3a",
+            "id": "63372ab8-0699-4913-b9b1-37d319797fb7",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "lightBeam",
+            "x": 930,
+            "y": 640
         }
     ],
     "plainObjects": [
