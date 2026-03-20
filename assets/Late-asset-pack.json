@@ -1,1 +1,20 @@
-{"section1":{"files":[]},"meta":{"app":"Phaser Editor 2D - Asset Pack Editor","url":"https://phasereditor2d.com","contentType":"phasereditor2d.pack.core.AssetContentType","version":2}}
+{
+    "section1": {
+        "files": [
+            {
+                "atlasURL": "assets/atlas/Blobber.json",
+                "textureURL": "assets/atlas/Blobber.png",
+                "type": "atlas",
+                "key": "Blobber"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false,
+        "visible": true
+    }
+}
