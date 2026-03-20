@@ -135,6 +135,17 @@ class BaseScene extends Phaser.Scene {
 			this.tilespriteBG.height=this.layer.height;
 		//	this.tilespriteBG.setOrigin(0.5,0.5);
 		}
+
+		// use totalfondo asset as a fullscreen filter layer
+		const totalFondoOverlay = this.add.image(this.cameras.main.centerX, this.cameras.main.centerY, "totalfondo");
+		totalFondoOverlay.displayWidth = this.cameras.main.width;
+		totalFondoOverlay.displayHeight = this.cameras.main.height;
+		totalFondoOverlay.setAlpha(1);
+		totalFondoOverlay.setDepth(150);
+		totalFondoOverlay.setScrollFactor(0);
+		totalFondoOverlay.setDepth(1000);
+		new FixedToCamera(totalFondoOverlay);
+		this.totalFondoOverlay = totalFondoOverlay;
 		//MUSIC
 		this.superbravo_gameplay_chip01 = this.sound.add('superbravo_gameplay_chip01');
 

@@ -52,23 +52,23 @@ class NewLevel1 extends BaseScene {
 		this.add.existing(player);
 
 		// wallLight
-		this.add.image(485, 679, "wallLight");
+		this.add.image(930, 640, "wallLight");
 
 		// upperTile
 		const upperTile = new_level1.createLayer("upperTile", [], 0, 0);
 
 		// tutiSupa1
-		const tutiSupa1 = this.add.image(136, 542, "tutiSupa1");
+		const tutiSupa1 = this.add.image(148, 546, "tutiSupa1");
 		tutiSupa1.scaleX = 0.5;
 		tutiSupa1.scaleY = 0.5;
 
 		// tutiSupa2
-		const tutiSupa2 = this.add.image(317, 542, "tutiSupa2");
+		const tutiSupa2 = this.add.image(330, 679, "tutiSupa2");
 		tutiSupa2.scaleX = 0.5;
 		tutiSupa2.scaleY = 0.5;
 
 		// tutiSupa3
-		const tutiSupa3 = this.add.image(722, 542, "tutiSupa3");
+		const tutiSupa3 = this.add.image(735, 679, "tutiSupa3");
 		tutiSupa3.scaleX = 0.5;
 		tutiSupa3.scaleY = 0.5;
 
@@ -89,6 +89,11 @@ class NewLevel1 extends BaseScene {
 		// sampoShooter
 		const sampoShooter = new SampoShooter(this, 93, 366);
 		this.add.existing(sampoShooter);
+
+		// hand
+		const hand = this.add.image(1059, 701, "hand");
+		hand.scaleY = -1;
+		hand.angle = -124;
 
 		// lists
 		const doors = [];

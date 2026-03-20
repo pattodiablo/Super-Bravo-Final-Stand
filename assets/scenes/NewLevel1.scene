@@ -91,8 +91,8 @@
             "texture": {
                 "key": "wallLight"
             },
-            "x": 485,
-            "y": 679
+            "x": 930,
+            "y": 640
         },
         {
             "type": "TilemapLayer",
@@ -112,8 +112,8 @@
             "texture": {
                 "key": "tutiSupa1"
             },
-            "x": 136,
-            "y": 542,
+            "x": 148,
+            "y": 546,
             "scaleX": 0.5,
             "scaleY": 0.5
         },
@@ -124,8 +124,8 @@
             "texture": {
                 "key": "tutiSupa2"
             },
-            "x": 317,
-            "y": 542,
+            "x": 330,
+            "y": 679,
             "scaleX": 0.5,
             "scaleY": 0.5
         },
@@ -136,8 +136,8 @@
             "texture": {
                 "key": "tutiSupa3"
             },
-            "x": 722,
-            "y": 542,
+            "x": 735,
+            "y": 679,
             "scaleX": 0.5,
             "scaleY": 0.5
         },
@@ -186,6 +186,18 @@
             "label": "sampoShooter",
             "x": 93,
             "y": 366
+        },
+        {
+            "type": "Image",
+            "id": "5a28c8f9-e3a6-473b-bd5b-e0779e34ac0f",
+            "label": "hand",
+            "texture": {
+                "key": "hand"
+            },
+            "x": 1059,
+            "y": 701,
+            "scaleY": -1,
+            "angle": -124
         }
     ],
     "plainObjects": [

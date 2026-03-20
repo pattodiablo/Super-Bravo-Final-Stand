@@ -1694,6 +1694,11 @@
                 "key": "Toll"
             },
             {
+                "url": "assets/images/totalfondo.png",
+                "type": "image",
+                "key": "totalfondo"
+            },
+            {
                 "url": [
                     "assets/scenes/prefabs/Traverso.js"
                 ],
