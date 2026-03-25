@@ -633,13 +633,12 @@ class BaseScene extends Phaser.Scene {
 		this.readyText = readyText;
 
 
-			// menuBtn
-		const menuBtn = new MenuPrefab(this, 313, 534);
-		menuBtn.setInteractive();
-		menuBtn.emit("components-awake");
-		
-		this.add.existing(menuBtn);
-		this.menuBtn = menuBtn;
+	
+
+		if (!this.scene.isActive("SettingsOverlay")) {
+			this.scene.launch("SettingsOverlay", { sourceSceneKey: this.scene.key });
+		}
+		this.scene.bringToTop("SettingsOverlay");
 
 			// menuBtn
 		//	const menuBtn = new MenuBtn(this, this.cameras.main.width-30, 37);

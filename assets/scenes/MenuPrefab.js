@@ -208,11 +208,63 @@ class MenuPrefab extends Phaser.GameObjects.Container {
 		this.resetGameText.setPosition(centerX - this.x, centerY - this.y + 1.5 * spacing);
 		this.resetGameText.setOrigin(0.5, 0.5);
 
+		const baseScene = this.scene.sourceSceneKey ? this.scene.scene.get(this.scene.sourceSceneKey) : null;
+		const syncFxTint = () => {
+			const muted = !!this.scene.game.playerData.isFxMuted;
+			const tint = muted ? 0x6d6d6d : 0xffffff;
+			this.menuOpt1.setTint(tint);
+			this.fxText.setTint(tint);
+		};
+		const syncMusicTint = () => {
+			const muted = !!this.scene.game.playerData.isMusicMuted;
+			const tint = muted ? 0x6d6d6d : 0xffffff;
+			this.menuOpt2.setTint(tint);
+			this.musicText.setTint(tint);
+		};
+		syncFxTint();
+		syncMusicTint();
+
 		// Make menu options interactive
-		this.menuOpt1.setInteractive().on('pointerdown', () => console.log('FX clicked')).on('pointerover', () => console.log('Hover FX'));
-		this.menuOpt2.setInteractive().on('pointerdown', () => console.log('Music clicked')).on('pointerover', () => console.log('Hover Music'));
-		this.menuOpt3.setInteractive().on('pointerdown', () => console.log('Exit to map clicked')).on('pointerover', () => console.log('Hover Exit'));
-		this.menuOpt4.setInteractive().on('pointerdown', () => console.log('Reset Game clicked')).on('pointerover', () => console.log('Hover Reset'));
+		this.menuOpt1.setInteractive().on('pointerdown', () => {
+			this.scene.game.playerData.isFxMuted = !this.scene.game.playerData.isFxMuted;
+			if (baseScene) {
+				if (this.scene.game.playerData.isFxMuted && baseScene.disableFx) {
+					baseScene.disableFx();
+				} else if (!this.scene.game.playerData.isFxMuted && baseScene.enableFx) {
+					baseScene.enableFx();
+				}
+			}
+			syncFxTint();
+		}).on('pointerover', () => {
+			this.scene.tweens.add({ targets: this.menuOpt1, scaleX: 1.12, scaleY: 1.12, duration: 120, yoyo: true, ease: 'Back.Out' });
+		}).on('pointerout', () => {
+			this.menuOpt1.setScale(1);
+		});
+		this.menuOpt2.setInteractive().on('pointerdown', () => {
+			this.scene.game.playerData.isMusicMuted = !this.scene.game.playerData.isMusicMuted;
+			if (baseScene) {
+				if (this.scene.game.playerData.isMusicMuted && baseScene.disableMusic) {
+					baseScene.disableMusic();
+				} else if (!this.scene.game.playerData.isMusicMuted && baseScene.enableMusic) {
+					baseScene.enableMusic();
+				}
+			}
+			syncMusicTint();
+		}).on('pointerover', () => {
+			this.scene.tweens.add({ targets: this.menuOpt2, scaleX: 1.12, scaleY: 1.12, duration: 120, yoyo: true, ease: 'Back.Out' });
+		}).on('pointerout', () => {
+			this.menuOpt2.setScale(1);
+		});
+		this.menuOpt3.setInteractive().on('pointerdown', () => console.log('Exit to map clicked')).on('pointerover', () => {
+			this.scene.tweens.add({ targets: this.menuOpt3, scaleX: 1.12, scaleY: 1.12, duration: 120, yoyo: true, ease: 'Back.Out' });
+		}).on('pointerout', () => {
+			this.menuOpt3.setScale(1);
+		});
+		this.menuOpt4.setInteractive().on('pointerdown', () => console.log('Reset Game clicked')).on('pointerover', () => {
+			this.scene.tweens.add({ targets: this.menuOpt4, scaleX: 1.12, scaleY: 1.12, duration: 120, yoyo: true, ease: 'Back.Out' });
+		}).on('pointerout', () => {
+			this.menuOpt4.setScale(1);
+		});
 
 		// Position subOpt evenly in the center of menuPanel2
 		const subSpacing = 70; // Vertical spacing for sub options
@@ -235,13 +287,28 @@ class MenuPrefab extends Phaser.GameObjects.Container {
 
 		this.menuPanel2Group.setVisible(false);
 
-		this.mainMenuGroup.setVisible(true);	
+		this.mainMenuGroup.setVisible(false);	
 
 		this.menuBtn.setInteractive().on('pointerdown', function(pointer, localX, localY, event){
 			console.log("Menu button clicked");
-			this.scene.pause();
-			this.mainMenuGroup.setVisible(true);
-		}, this.scene);
+			this.scene.IsPaused = !this.scene.IsPaused;
+
+			if (this.scene.IsPaused) {
+				this.scene.scene.manager.scenes.forEach((sceneInstance) => {
+					if (sceneInstance && sceneInstance.scene && sceneInstance.scene.key !== "SettingsOverlay" && sceneInstance.scene.isActive()) {
+						sceneInstance.scene.pause();
+					}
+				});
+				this.mainMenuGroup.setVisible(true);
+			} else {
+				this.scene.scene.manager.scenes.forEach((sceneInstance) => {
+					if (sceneInstance && sceneInstance.scene && sceneInstance.scene.key !== "SettingsOverlay" && sceneInstance.scene.isPaused()) {
+						sceneInstance.scene.resume();
+					}
+				});
+				this.mainMenuGroup.setVisible(false);
+			}
+		}, this);
 
 	}
 

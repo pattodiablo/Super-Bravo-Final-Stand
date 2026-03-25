@@ -1291,6 +1291,11 @@
                 "key": "samposhooter_destroy_01"
             },
             {
+                "url": "assets/scenes/SettingsOverlay.js",
+                "type": "sceneFile",
+                "key": "SettingsOverlay"
+            },
+            {
                 "url": [
                     "assets/scenes/prefabs/ShieldBtn.js"
                 ],
