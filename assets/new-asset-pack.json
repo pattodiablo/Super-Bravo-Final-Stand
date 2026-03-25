@@ -72,6 +72,12 @@
                 "key": "BlobberAnimations"
             },
             {
+                "textureURL": "assets/fonts/bmpfont/bmpfont.png",
+                "fontDataURL": "assets/fonts/bmpfont/bmpfont.xml",
+                "type": "bitmapFont",
+                "key": "bmpfont"
+            },
+            {
                 "url": [
                     "assets/scenes/prefabs/BossArm.js"
                 ],
@@ -919,6 +925,26 @@
                 "key": "MainStomp"
             },
             {
+                "url": "assets/images/MapBG.png",
+                "type": "image",
+                "key": "MapBG"
+            },
+            {
+                "url": "assets/images/MapBtn.png",
+                "type": "image",
+                "key": "MapBtn"
+            },
+            {
+                "url": "assets/scenes/prefabs/MapBtn.js",
+                "type": "script",
+                "key": "MapBtn_1"
+            },
+            {
+                "url": "assets/images/MapRoute.png",
+                "type": "image",
+                "key": "MapRoute"
+            },
+            {
                 "atlasURL": "assets/atlas/mechapirana.json",
                 "textureURL": "assets/atlas/mechapirana.png",
                 "type": "atlas",
@@ -1038,6 +1064,11 @@
                 "textureURL": "assets/atlas/newSupaAnimationsRune2Powers.png",
                 "type": "atlas",
                 "key": "newSupaAnimationsRune2Powers"
+            },
+            {
+                "url": "assets/images/NextBtn.png",
+                "type": "image",
+                "key": "NextBtn"
             },
             {
                 "url": [
@@ -1278,6 +1309,11 @@
                 ],
                 "type": "scripts",
                 "key": "SmallDoor"
+            },
+            {
+                "url": "assets/images/soporteInferior.png",
+                "type": "image",
+                "key": "soporteInferior"
             },
             {
                 "url": "assets/images/SpeedTile.png",
@@ -1632,6 +1668,11 @@
                 "textureURL": "assets/atlas/traversoFly.png",
                 "type": "atlas",
                 "key": "traversoFly"
+            },
+            {
+                "url": "assets/images/TriangleBtn.png",
+                "type": "image",
+                "key": "TriangleBtn"
             },
             {
                 "url": "assets/images/tutiSupa1.png",

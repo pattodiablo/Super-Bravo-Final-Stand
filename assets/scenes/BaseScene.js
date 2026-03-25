@@ -1608,7 +1608,7 @@ nextLevelGame() {
 
 			this.scene.remove(this.scene.keys);
 			var sceneToGo = this.scene.get("InterludeMap");
-			sceneToGo.setLevel(nombreDeEstaEscena,1,1,0,0,false);
+			sceneToGo.setLevel(nombreDeEstaEscena,1,1,0,0,true);
 			sceneToGo.isMainScene = false;
 
 			activeLeveles.forEach(level => {

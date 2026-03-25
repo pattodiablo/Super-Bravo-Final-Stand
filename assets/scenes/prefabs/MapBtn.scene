@@ -1,0 +1,40 @@
+{
+    "id": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "816933a1-265e-4319-b887-99ec87e9f98a",
+            "label": "mapBtn",
+            "texture": {
+                "key": "MapBtn"
+            }
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "LevelToGo",
+            "label": "LevelToGo",
+            "tooltip": "",
+            "defValue": "NewLevel1",
+            "customDefinition": false,
+            "type": {
+                "id": "string"
+            }
+        }
+    ]
+}

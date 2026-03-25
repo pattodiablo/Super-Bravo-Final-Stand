@@ -129,7 +129,21 @@ class Coin extends Phaser.GameObjects.Sprite {
 			if (typeof window !== "undefined" && window.localStorage) {
 				const finishedLevelKey = (this.scene.scene && this.scene.scene.key) || null;
 				if (finishedLevelKey) {
-					window.localStorage.setItem("lastCompletedLevel", finishedLevelKey);
+					const extractLevelNumber = (levelKey) => {
+						if (typeof levelKey !== "string" || !levelKey.length) {
+							return null;
+						}
+						const match = levelKey.match(/(\d+)(?!.*\d)/);
+						return match ? parseInt(match[1], 10) : null;
+					};
+
+					const currentStored = window.localStorage.getItem("lastCompletedLevel");
+					const currentNum = extractLevelNumber(currentStored);
+					const newNum = extractLevelNumber(finishedLevelKey);
+
+					if (newNum !== null && (currentNum === null || newNum > currentNum)) {
+						window.localStorage.setItem("lastCompletedLevel", finishedLevelKey);
+					}
 				}
 			}
 			this.scene.player.isWin();

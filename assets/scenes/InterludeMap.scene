@@ -10,139 +10,544 @@
     },
     "displayList": [
         {
-            "type": "Sprite",
-            "id": "3dbc9429-7287-49c6-bedb-894cc448d9a4",
-            "label": "red",
+            "type": "Image",
+            "id": "8335cd70-ff95-481d-b06f-5d17ab5803ea",
+            "label": "interludeBg",
             "scope": "CLASS",
-            "components": [],
             "texture": {
-                "key": "energyPanel_doubleJump"
+                "key": "MapBG"
             },
-            "scaleX": 0.4285714285714286,
-            "scaleY": 0.4285714285714286,
             "originX": 0,
             "originY": 0
         },
         {
             "type": "Image",
-            "id": "8335cd70-ff95-481d-b06f-5d17ab5803ea",
-            "label": "interludeBg",
-            "scope": "CLASS",
-            "components": [],
+            "id": "b7d5e2a6-82fe-43b3-a811-6317a44102a4",
+            "label": "soporteInferior",
             "texture": {
-                "key": "interludeBg_1"
-            }
-        },
-        {
-            "type": "Sprite",
-            "id": "98c21977-66a7-4b03-b561-6377e3d09453",
-            "label": "jumpingSupa",
-            "scope": "CLASS",
-            "components": [],
-            "texture": {
-                "key": "jumpingSupa"
+                "key": "soporteInferior"
             },
-            "x": 174,
-            "y": 341,
-            "originY": 0
+            "x": 540,
+            "y": 505
         },
         {
             "type": "Image",
-            "id": "d06e06b7-206d-486a-9d82-6a7f08014aed",
-            "label": "spot",
-            "scope": "CLASS",
-            "components": [],
-            "texture": {
-                "key": "spot"
-            },
-            "x": 177,
-            "y": 392
-        },
-        {
-            "prefabId": "f2b057b7-54cf-4103-8126-4cb4475952c1",
-            "id": "1148d579-2875-4290-8023-d3bbb9d58073",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "star2",
-            "scope": "CLASS",
-            "components": [],
-            "x": 166,
-            "y": 120,
-            "nestedPrefabs": []
-        },
-        {
-            "type": "Sprite",
-            "id": "7cc5fe8e-155f-4788-b99d-4caeb1691b12",
-            "label": "hangOn",
-            "scope": "CLASS",
-            "components": [],
-            "texture": {
-                "key": "hangOn"
-            },
-            "x": 240,
-            "y": 291
-        },
-        {
-            "type": "Sprite",
-            "id": "c83d745a-90de-4f33-9a0e-4638f5cd0133",
+            "id": "5ba047da-891d-4f04-9972-0b54f2c75556",
             "label": "nextBtn",
             "scope": "CLASS",
-            "components": [],
             "texture": {
-                "key": "nextBtn"
+                "key": "NextBtn"
             },
-            "x": 166,
-            "y": 387,
-            "scaleX": 0,
-            "scaleY": 0
+            "x": 540,
+            "y": 500
         },
         {
-            "type": "Text",
-            "id": "411bb98e-eef3-42cf-a8ae-07a5c51b3caf",
-            "label": "titleText",
-            "scope": "CLASS",
-            "components": [],
-            "x": 169,
-            "y": 68,
-            "originX": 0.5,
-            "text": "Well done"
+            "type": "Image",
+            "id": "31f4c8f6-c6d9-4b1d-9520-ab98bd789c42",
+            "label": "mapRoute",
+            "texture": {
+                "key": "MapRoute"
+            },
+            "x": 540,
+            "y": 225
         },
         {
-            "prefabId": "f2b057b7-54cf-4103-8126-4cb4475952c1",
-            "id": "96c90f90-5e06-465d-a3b3-8b83ebb5914a",
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "76b2be98-532b-43b2-8743-e215f7956acd",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "LevelToGo"
             ],
-            "label": "star3",
-            "scope": "CLASS",
-            "components": [],
-            "x": 260,
-            "y": 128,
-            "nestedPrefabs": []
+            "label": "mapBtn_0",
+            "LevelToGo": "NewLevel1",
+            "x": 67,
+            "y": 190
         },
         {
-            "prefabId": "f2b057b7-54cf-4103-8126-4cb4475952c1",
-            "id": "6c2a5846-bec8-46b6-8514-1f0c67923689",
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "c556d8b0-9e90-4e18-bcd7-05251353904a",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "LevelToGo"
             ],
-            "label": "star1",
+            "label": "mapBtn_1",
+            "LevelToGo": "NewLevel2",
+            "x": 99,
+            "y": 295
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "ac285cc7-ac2c-4f96-8527-dbf242c25ccf",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_2",
+            "LevelToGo": "NewLevel3",
+            "x": 149,
+            "y": 199
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "d0899558-6e35-4d40-99ae-6c255734a105",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_3",
+            "LevelToGo": "NewLevel4",
+            "x": 202,
+            "y": 296
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "6a0cf154-e754-4a9a-92ba-2c015308c3be",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_4",
+            "LevelToGo": "NewLevel5",
+            "x": 234,
+            "y": 169
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "c1ffbbd3-ea28-44c9-bb6a-3e73c94fe0e1",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_5",
+            "LevelToGo": "NewLevel6",
+            "x": 322,
+            "y": 273
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "cd67d80b-27b0-469e-b722-934b62b4d62f",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_6",
+            "LevelToGo": "NewLevel7",
+            "x": 373,
+            "y": 206
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "24386b9a-595a-4267-9063-7df05d8fd2fe",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_7",
+            "LevelToGo": "NewLevel8",
+            "x": 399,
+            "y": 342
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "412204e3-51d1-469d-ac84-f199801e95af",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_8",
+            "LevelToGo": "NewLevel9",
+            "x": 441,
+            "y": 241
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "b0749c1c-1fca-41b1-a55c-8083bce406b5",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_9",
+            "LevelToGo": "NewLevel10",
+            "x": 494,
+            "y": 339
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "bdb833ba-ac51-4323-8523-ca9d927d7551",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_10",
+            "LevelToGo": "NewLevel11",
+            "x": 601,
+            "y": 298
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "f8560bc0-60ef-47f8-8140-fe7747bc42fd",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_11",
+            "LevelToGo": "NewLevel12",
+            "x": 592,
+            "y": 198
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "2db9c46e-d1c6-4616-a5c0-58c308fee493",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_12",
+            "LevelToGo": "NewLevel13",
+            "x": 678,
+            "y": 194
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "f5fbd3b3-13ae-4fe5-821e-623c9bafd6ab",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_13",
+            "LevelToGo": "NewLevel14",
+            "x": 700,
+            "y": 315
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "4062a9b6-cd5b-4237-82ec-7c95de7ea556",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_14",
+            "LevelToGo": "NewLevel15",
+            "x": 748,
+            "y": 238
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "80392d04-918f-45ba-8c59-ecc10ddb5273",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_15",
+            "LevelToGo": "NewLevel16",
+            "x": 848,
+            "y": 373
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "15fdc976-8bea-4391-843c-7739cf7dbc0a",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_16",
+            "LevelToGo": "NewLevel17",
+            "x": 916,
+            "y": 314
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "f427d76c-fae2-497e-82db-a89109141a76",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_17",
+            "LevelToGo": "NewLevel18",
+            "x": 919,
+            "y": 227
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "879ef321-ef70-4e82-9b17-f0d1c0f4e2f5",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_18",
+            "LevelToGo": "NewLevel19",
+            "x": 989,
+            "y": 152
+        },
+        {
+            "prefabId": "c92ce0d5-bc58-467b-9719-26fcafe26b10",
+            "id": "7acb1ef5-1123-4632-b52b-72c40961e036",
+            "unlock": [
+                "x",
+                "y",
+                "LevelToGo"
+            ],
+            "label": "mapBtn_19",
+            "LevelToGo": "NewLevel20",
+            "x": 1012,
+            "y": 43
+        },
+        {
+            "type": "Image",
+            "id": "c468b0b0-04bf-4068-b07c-ee236db350c2",
+            "label": "triangleBtn",
             "scope": "CLASS",
-            "components": [],
-            "x": 70,
-            "y": 128,
-            "nestedPrefabs": []
+            "texture": {
+                "key": "TriangleBtn"
+            },
+            "x": 232,
+            "y": 108
+        },
+        {
+            "type": "BitmapText",
+            "id": "53b63836-e943-42f7-b961-856930d7fed4",
+            "label": "bitmaptext_1",
+            "x": 60,
+            "y": 166,
+            "tintFill": true,
+            "text": "1",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "70587355-84da-4f9b-b428-cf1f156d524f",
+            "label": "bitmaptext",
+            "x": 86,
+            "y": 271,
+            "tintFill": true,
+            "text": "2",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "a94e1d15-15dc-49d1-b1fd-a527d8c63789",
+            "label": "bitmaptext_2",
+            "x": 140,
+            "y": 174,
+            "tintFill": true,
+            "text": "3",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "e7330127-14df-4dce-8d38-fd809d3a7323",
+            "label": "bitmaptext_3",
+            "x": 191,
+            "y": 273,
+            "tintFill": true,
+            "text": "4",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "a136f835-1268-4a20-8409-5e6e3ee2043e",
+            "label": "bitmaptext_4",
+            "x": 224,
+            "y": 144,
+            "tintFill": true,
+            "text": "5",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "794a4b39-daef-46cf-9e31-aee9d4e81d56",
+            "label": "bitmaptext_5",
+            "x": 311,
+            "y": 247,
+            "tintFill": true,
+            "text": "6",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "2ce4b1fd-eef4-4786-a831-e4b94e5aa92b",
+            "label": "bitmaptext_6",
+            "x": 361,
+            "y": 181,
+            "tintFill": true,
+            "text": "7",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "18711dde-8f8e-47a2-ad81-b180cebab5eb",
+            "label": "bitmaptext_7",
+            "x": 387,
+            "y": 317,
+            "tintFill": true,
+            "text": "8",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "1e36f111-2b5a-4c34-9c34-a3054ae6f27e",
+            "label": "bitmaptext_8",
+            "x": 429,
+            "y": 214,
+            "tintFill": true,
+            "text": "9",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "6dbf3283-2949-457c-bd18-b55f15e151de",
+            "label": "bitmaptext_9",
+            "x": 476,
+            "y": 314,
+            "tintFill": true,
+            "text": "10",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "91fb258b-e6fa-48eb-aa27-8b3cf65c4cc5",
+            "label": "bitmaptext_10",
+            "x": 590,
+            "y": 272,
+            "tintFill": true,
+            "text": "11",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "fdce6855-b29b-4e81-aa1f-8d74f9199ec5",
+            "label": "bitmaptext_11",
+            "x": 576,
+            "y": 172,
+            "tintFill": true,
+            "text": "12",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "35e2b9d7-72df-43dc-aebe-7a0c07927668",
+            "label": "bitmaptext_12",
+            "x": 663,
+            "y": 168,
+            "tintFill": true,
+            "text": "13",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "b19d20c1-15ab-46c7-b2f1-e8b7fdb8c04e",
+            "label": "bitmaptext_13",
+            "x": 684,
+            "y": 290,
+            "tintFill": true,
+            "text": "14",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "2a2a254f-01f7-4430-b844-6028822d1148",
+            "label": "bitmaptext_14",
+            "x": 734,
+            "y": 213,
+            "tintFill": true,
+            "text": "15",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "1686949b-64df-49ba-a651-6e1ddce4f22f",
+            "label": "bitmaptext_15",
+            "x": 832,
+            "y": 348,
+            "tintFill": true,
+            "text": "16",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "5eafb789-667f-42e5-9b69-792d62cc4e09",
+            "label": "bitmaptext_16",
+            "x": 900,
+            "y": 291,
+            "tintFill": true,
+            "text": "17",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "e04aecc3-d80d-48ee-bb28-f81084dc7d89",
+            "label": "bitmaptext_17",
+            "x": 903,
+            "y": 201,
+            "tintFill": true,
+            "text": "18",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "d101183b-718a-41cf-9264-6e358ffe1967",
+            "label": "bitmaptext_18",
+            "x": 977,
+            "y": 126,
+            "tintFill": true,
+            "text": "19",
+            "font": "bmpfont",
+            "fontSize": 40
+        },
+        {
+            "type": "BitmapText",
+            "id": "cd50782a-5371-4127-a0b9-d1f73369356e",
+            "label": "bitmaptext_19",
+            "x": 990,
+            "y": 16,
+            "tintFill": true,
+            "text": "20",
+            "font": "bmpfont",
+            "fontSize": 40
         }
     ],
     "plainObjects": [],
     "meta": {
-        "app": "Phaser Editor 2D - Scene Editor",
-        "url": "https://phasereditor2d.com",
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }
