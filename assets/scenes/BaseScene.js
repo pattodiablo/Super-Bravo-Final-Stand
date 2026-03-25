@@ -574,7 +574,7 @@ class BaseScene extends Phaser.Scene {
 		this.coinDisplay=coinDisplay;
 
 			// score
-			const timerText = this.add.text(this.cameras.main.width-80, 26, "", {});
+			const timerText = this.add.text(this.cameras.main.width-120, 29, "", {});
 			timerText.text = "0:00";
 			timerText.setOrigin(0,0.5);
 			timerText.setStyle({"fontFamily":"Arial","fontSize":"23px","fontStyle":"bold","align":"center", });
@@ -631,6 +631,15 @@ class BaseScene extends Phaser.Scene {
 		new FixedToCamera(readyText);
 		readyText.emit("components-awake");
 		this.readyText = readyText;
+
+
+			// menuBtn
+		const menuBtn = new MenuPrefab(this, 313, 534);
+		menuBtn.setInteractive();
+		menuBtn.emit("components-awake");
+		
+		this.add.existing(menuBtn);
+		this.menuBtn = menuBtn;
 
 			// menuBtn
 		//	const menuBtn = new MenuBtn(this, this.cameras.main.width-30, 37);

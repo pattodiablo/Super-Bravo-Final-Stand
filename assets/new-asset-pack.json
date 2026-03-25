@@ -963,18 +963,26 @@
                 "key": "MechaPirana_1"
             },
             {
-                "url": [
-                    "assets/scenes/prefabs/MenuBtn.js"
-                ],
-                "type": "scripts",
-                "key": "MenuBtn"
+                "url": "assets/images/menuBtn.png",
+                "type": "image",
+                "key": "menuBtn"
+            },
+            {
+                "url": "assets/images/MenuOpt.png",
+                "type": "image",
+                "key": "MenuOpt"
+            },
+            {
+                "url": "assets/images/MenuPanel.png",
+                "type": "image",
+                "key": "MenuPanel"
             },
             {
                 "url": [
-                    "assets/scenes/prefabs/MenuPanel.js"
+                    "assets/scenes/MenuPrefab.js"
                 ],
                 "type": "scripts",
-                "key": "MenuPanel"
+                "key": "MenuPrefab"
             },
             {
                 "url": [

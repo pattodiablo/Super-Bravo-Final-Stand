@@ -1,0 +1,166 @@
+{
+    "id": "b7be257d-83f0-4b80-87a8-d7cf51470e2c",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "f326615f-059d-4325-b44e-a9e7d200bcf6",
+            "label": "container_1",
+            "x": -82,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "7d5f294e-227a-4c6a-a796-944f338a922b",
+                    "label": "menuBtn",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "menuBtn"
+                    },
+                    "x": 82
+                },
+                {
+                    "type": "Image",
+                    "id": "93cab83c-548d-4100-84a7-3c36d4af5148",
+                    "label": "menuPanel",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuPanel"
+                    },
+                    "x": -181,
+                    "y": 203
+                },
+                {
+                    "type": "Image",
+                    "id": "6f2cf897-55a6-4bd4-bcc0-2d42cf817112",
+                    "label": "menuOpt4",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuOpt"
+                    },
+                    "x": -187,
+                    "y": 301
+                },
+                {
+                    "type": "Image",
+                    "id": "df834183-6b37-4f21-9ea9-dbcddea90120",
+                    "label": "menuOpt3",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuOpt"
+                    },
+                    "x": -187,
+                    "y": 237
+                },
+                {
+                    "type": "Image",
+                    "id": "8e4f7e15-5acc-41c8-8e61-023dc5485857",
+                    "label": "menuOpt2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuOpt"
+                    },
+                    "x": -188,
+                    "y": 174
+                },
+                {
+                    "type": "Image",
+                    "id": "f03d0836-add4-4d52-afdc-7094e58bea24",
+                    "label": "menuOpt1",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuOpt"
+                    },
+                    "x": -189,
+                    "y": 111
+                },
+                {
+                    "type": "Image",
+                    "id": "13b80e09-4c60-4ac8-b29e-638f40bc9f43",
+                    "label": "menuPanel2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuPanel"
+                    },
+                    "x": -178,
+                    "y": 203
+                },
+                {
+                    "type": "Image",
+                    "id": "8f19113b-b6ca-4c59-891e-d6d5491eef86",
+                    "label": "SubOpt2",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuOpt"
+                    },
+                    "x": -182,
+                    "y": 233
+                },
+                {
+                    "type": "Image",
+                    "id": "f79b12b7-61b6-4c9a-8101-6f3479a8502d",
+                    "label": "SubOpt1",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "MenuOpt"
+                    },
+                    "x": -182,
+                    "y": 169
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "024162bb-28a6-4b76-9c0a-1f1e9e5abf7f",
+                    "label": "AreYouSure",
+                    "scope": "CLASS",
+                    "x": -179,
+                    "y": 110,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "tintFill": true,
+                    "text": "Are you sure?",
+                    "font": "bmpfont",
+                    "fontSize": 45
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "209f737f-a5ba-4633-8de4-d8ccdf4d3718",
+                    "label": "Yes",
+                    "scope": "CLASS",
+                    "x": -186,
+                    "y": 171,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Yes",
+                    "font": "bmpfont",
+                    "fontSize": 35
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "5925caba-1309-40e5-8d06-27bbd7d1809a",
+                    "label": "No",
+                    "scope": "CLASS",
+                    "x": -185,
+                    "y": 234,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "No",
+                    "font": "bmpfont",
+                    "fontSize": 35
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

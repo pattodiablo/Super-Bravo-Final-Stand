@@ -17,17 +17,6 @@ class NewLevel1 extends BaseScene {
 	preload() {
 
 		this.load.pack("NewLevel1Pack", "assets/NewLevel1Pack.json");
-	
-
-	
-
-		//	this.load.video("pruebaVideo", "assets/video/pruebaVideo.mp4");
-		//	this.load.video("ending", "assets/video/ending.mp4");
-	
-				
-			
-	
-	
 	}
 
 	/** @returns {void} */
