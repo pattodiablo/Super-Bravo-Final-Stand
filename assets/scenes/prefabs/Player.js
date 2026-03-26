@@ -364,11 +364,32 @@ class Player extends Phaser.GameObjects.Sprite {
 			//	emitZone: { type: 'edge', source: rose, quantity: 360 },
 			follow: this
 		});
+		this.particleEmitter = this.particles.emitters.list[0];
 		var supaCurrentDepth = this.depth;
 
 		this.setDepth(supaCurrentDepth+1);
 		this.particles.visible = false;
 
+	}
+
+	stopFollowParticles() {
+		if (this.particleEmitter) {
+			this.particleEmitter.stop();
+			this.particleEmitter.follow = null;
+		}
+		if (this.particles) {
+			this.particles.visible = false;
+		}
+	}
+
+	resumeFollowParticles() {
+		if (this.particleEmitter) {
+			this.particleEmitter.follow = this;
+			this.particleEmitter.start();
+		}
+		if (this.particles) {
+			this.particles.visible = true;
+		}
 	}
 	createJetPackBullets() {
 		this.jetPackBullets = [];
@@ -1276,7 +1297,7 @@ class Player extends Phaser.GameObjects.Sprite {
 	checkIfSupaBite() { //para cuando se lanza del cañon
 
 
-		if (this.wannaBite) {
+		if (this.wannaBite ) {
 			if (this.isFiredfromCannon || (this.cannonRoll && this.cannonRoll.active)) {
 				this.wannaBite = false;
 				return;
@@ -1287,34 +1308,25 @@ class Player extends Phaser.GameObjects.Sprite {
 			this.visible=false;
 			this.isBiting = true;
 			this.body.setVelocity(0);
-
-
+			this.body.enable = false;
+			this.body.setGravityY(0);
+			this.isDropping = false;
 			this.scene.cameras.main.shake();
 			this.waitingfortarget = true;
-
+			this.stopFollowParticles();
 			this.cannonRoll = new CannonRoll(this.scene, this.x, this.y);
 			this.scene.add.existing(this.cannonRoll);
-			this.body.enable = false;
 			this.cannonRoll.emit("prefab-awake");
 			this.scene.cannonRollPack.push(this.cannonRoll);
 			this.scene.cameras.main.stopFollow(this);
 			this.scene.cameras.main.startFollow(this.cannonRoll,true, 0.4, 0.04);
 
-		
-			var animateRoll = this.scene.tweens.createTimeline();
-			animateRoll.add({
-				targets: this.cannonRoll,
-				x:  this.cannonPosition[0],
-				y:  this.cannonPosition[1],
-				duration: 200,
-				ease: 'Linear',
-				repeat: 0
+			const explotion = new Explotion(this.scene, this.cannonPosition[0], this.cannonPosition[1]);
 
-			});
-
-			this.scene.time.delayedCall(50, function () {
-				animateRoll.play();
-			}, null, this);
+			this.scene.add.existing(explotion);		
+			explotion.setDepth(100);
+			explotion.setScale(2);
+			explotion.emit("prefab-awake");
 
 			this.scene.cameras.main.flash();						
 			this.isFiredfromCannon=true;
@@ -1924,7 +1936,7 @@ this.scene.game.playerData.life = this.playerLife;
 		this.isSupaRolling = true;
 		
 		var timeline = this.scene.tweens.createTimeline();
-		this.particles.visible = true;
+		this.resumeFollowParticles();
 
 		try{
 			this.scene.supa_spawn01.play();

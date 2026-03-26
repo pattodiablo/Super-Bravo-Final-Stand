@@ -52,6 +52,7 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 	}
 
 	getCoin(cannonRoll,coin){
+		console.log("Coin collected");
 		coin.getCoin(cannonRoll,coin);
 	}
 
@@ -76,7 +77,7 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 		this.scene.time.addEvent({
 			delay: 300,
 			callback: function () {
-				rolledPlayer.body.enable = true;
+				//rolledPlayer.body.enable = true;
 				rolledPlayer.scene.physics.velocityFromAngle(cannon.angle - 90, 600, rolledPlayer.body.velocity);
 			},
 			callbackScope: this,
@@ -84,6 +85,25 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 		});
 	}
 
+	translatePlayer(cannonRoll,wall){
+	
+	
+		if(	this.scene.player.isFiredfromCannon){
+				this.scene.player.visible = true;
+				this.scene.player.isFiredfromCannon=false;
+				this.isBeingfired = false;
+				this.scene.player.body.enable = true;
+				this.scene.player.x = this.x;
+				this.scene.player.y = this.y;
+				this.scene.player.resumeFollowParticles();
+				this.scene.cameras.main.startFollow(this.scene.player);
+				this.scene.cannonRollPack = [];
+				this.particles.destroy();
+				this.destroy();
+		}
+				
+		
+			/*
 	timeToStopFlying(){
 		
 		this.timertoKill = this.scene.time.addEvent({
@@ -126,27 +146,7 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 		});
 
 	}
-
-	translatePlayer(cannonRoll,wall){
-	
-	
-		if(	this.scene.player.isFiredfromCannon){
-			this.scene.player.visible = true;
-			this.scene.player.isFiredfromCannon=false;
-			this.isBeingfired = false;
-				this.scene.player.body.enable = true;
-				this.scene.player.x = this.x;
-				this.scene.player.y = this.y;
-				this.scene.cameras.main.startFollow(this.scene.player);
-				this.scene.cannonRollPack = [];
-				this.particles.destroy();
-	
-
-				this.destroy();
-		}
-				
-		
-				
+*/	
 
 		}
 
