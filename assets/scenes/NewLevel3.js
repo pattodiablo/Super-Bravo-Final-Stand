@@ -35,49 +35,53 @@ class NewLevel3 extends BaseScene {
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg2TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg1");
 		tilespriteBG.setOrigin(0, 1);
 
 		// player
-		const player = new Player(this, 91, 599);
+		const player = new Player(this, 121, 655);
 		this.add.existing(player);
 
 		// nocollide
-		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide2", [], 0, 0);
 
 		// nocollide_1
-		mapa.createLayer("nocollide", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide", [], 0, 0);
 
 		// layer
 		const layer = mapa.createLayer("layer", ["new_ciudad_tiles"], 0, 0);
 
 		// catapulta
-		const catapulta = new Catapulta(this, 287, 436);
+		const catapulta = new Catapulta(this, 1455, 688);
 		this.add.existing(catapulta);
 
 		// heart
-		const heart = new Heart(this, 293, 606);
+		const heart = new Heart(this, 818, 181);
 		this.add.existing(heart);
 
 		// upperTile
-		const upperTile = new_level3.createLayer("upperTile", ["new_ciudad_tiles"], 0, 0);
+		const upperTile = new_level3.createLayer("upperTile", [], 0, 0);
 
 		// sampoShooter
-		const sampoShooter = new SampoShooter(this, 430, 87);
+		const sampoShooter = new SampoShooter(this, 485, 228);
 		this.add.existing(sampoShooter);
 
 		// sampoShooter_1
-		const sampoShooter_1 = new SampoShooter(this, 1037, 648);
+		const sampoShooter_1 = new SampoShooter(this, 1061, 228);
 		this.add.existing(sampoShooter_1);
 
 		// enemyCreator
-		const enemyCreator = new EnemyCreator(this, 1167, 538);
+		const enemyCreator = new EnemyCreator(this, 1292, 413);
 		this.add.existing(enemyCreator);
+
+		// blobber
+		const blobber = new Blobber(this, 621, 464);
+		this.add.existing(blobber);
 
 		// lists
 		const doors = [];
 		const switches = [];
-		const enemies = [sampoShooter, sampoShooter_1];
+		const enemies = [sampoShooter, sampoShooter_1, blobber];
 		const platforms = [];
 		const coins = [];
 		const catapultas = [];
@@ -113,7 +117,7 @@ class NewLevel3 extends BaseScene {
 		this.catapultas = catapultas;
 		this.revivingPods = revivingPods;
 		this.tutorials = tutorials;
-		this.nextLevel = "NewLevel4";
+
 		this.events.emit("scene-awake");
 	}
 
@@ -135,7 +139,7 @@ class NewLevel3 extends BaseScene {
 	doors;
 	/** @type {Array<any>} */
 	switches;
-	/** @type {SampoShooter[]} */
+	/** @type {Array<SampoShooter|Blobber>} */
 	enemies;
 	/** @type {Array<any>} */
 	platforms;

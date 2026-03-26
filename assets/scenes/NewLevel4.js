@@ -35,11 +35,11 @@ class NewLevel4 extends BaseScene {
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg2TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg1");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide2", [], 0, 0);
 
 		// nocollide
 		mapa.createLayer("nocollide", [], 0, 0);
@@ -48,72 +48,69 @@ class NewLevel4 extends BaseScene {
 		const layer = mapa.createLayer("layer", ["new_ciudad_tiles"], 0, 0);
 
 		// player
-		const player = new Player(this, 852, 738);
+		const player = new Player(this, 80, 383);
 		this.add.existing(player);
 
 		// upperTile
 		const upperTile = new_level4.createLayer("upperTile", ["new_ciudad_tiles"], 0, 1);
 
-		// catapulta
-		const catapulta = new Catapulta(this, 849, 787);
-		this.add.existing(catapulta);
-
 		// drone
-		const drone = new Drone(this, 840, 77);
+		const drone = new Drone(this, 990, 245);
 		this.add.existing(drone);
 
 		// portalCannon
-		const portalCannon = new PortalCannon(this, 382, 736);
+		const portalCannon = new PortalCannon(this, 1489, 374);
 		this.add.existing(portalCannon);
+		portalCannon.angle = -180;
 
 		// portalCannon_1
-		const portalCannon_1 = new PortalCannon(this, 381, 102);
+		const portalCannon_1 = new PortalCannon(this, 286, 34);
 		this.add.existing(portalCannon_1);
-		portalCannon_1.angle = 90;
+		portalCannon_1.angle = -123;
 
 		// portalCannon_1_1
-		const portalCannon_1_1 = new PortalCannon(this, 1314, 612);
+		const portalCannon_1_1 = new PortalCannon(this, 287, 743);
 		this.add.existing(portalCannon_1_1);
-		portalCannon_1_1.angle = -90;
+		portalCannon_1_1.angle = 0;
 
 		// portalCannon_2
-		const portalCannon_2 = new PortalCannon(this, 1311, 736);
+		const portalCannon_2 = new PortalCannon(this, 1490, 743);
 		this.add.existing(portalCannon_2);
+		portalCannon_2.angle = -90;
 
 		// upgradeHalo
-		const upgradeHalo = new UpgradeHalo(this, 849, 577);
+		const upgradeHalo = new UpgradeHalo(this, 896, 368);
 		this.add.existing(upgradeHalo);
 
-		// powerPodium
-		const powerPodium = this.add.image(849, 588, "PowerPodium");
-		powerPodium.scaleX = 0.6582278481012658;
-		powerPodium.scaleY = 0.6582278481012658;
-		powerPodium.angle = -180;
-
-		// heart
-		const heart = new Heart(this, 74, 238);
-		this.add.existing(heart);
-
 		// heart_1
-		const heart_1 = new Heart(this, 1075, 457);
+		const heart_1 = new Heart(this, 545, 45);
 		this.add.existing(heart_1);
 
 		// sampoShooter
-		const sampoShooter = new SampoShooter(this, 1177, 482);
+		const sampoShooter = new SampoShooter(this, 1198, 443);
 		this.add.existing(sampoShooter);
 
 		// enemyCreator
-		const enemyCreator = new EnemyCreator(this, 604, 378);
+		const enemyCreator = new EnemyCreator(this, 611, 251);
 		this.add.existing(enemyCreator);
 
-		// catapulta_1
-		const catapulta_1 = new Catapulta(this, 144, 560);
-		this.add.existing(catapulta_1);
+		// sampoShooter_1
+		const sampoShooter_1 = new SampoShooter(this, 504, 87);
+		this.add.existing(sampoShooter_1);
+
+		// sampoShooter_2
+		const sampoShooter_2 = new SampoShooter(this, 1256, 75);
+		this.add.existing(sampoShooter_2);
+
+		// energyStation_instance_10000
+		const energyStation_instance_10000 = this.add.image(897, 382, "props", "energyStation instance 10000");
+		energyStation_instance_10000.scaleX = 0.5;
+		energyStation_instance_10000.scaleY = 0.5;
 
 		// lists
 		const doors = [];
 		const switches = [];
-		const enemies = [sampoShooter];
+		const enemies = [sampoShooter, sampoShooter_1, sampoShooter_2];
 		const platforms = [];
 		const coins = [];
 		const catapultas = [];
@@ -137,9 +134,6 @@ class NewLevel4 extends BaseScene {
 
 		// upgradeHalo (prefab fields)
 		upgradeHalo.isCannonStrike = true;
-
-		// catapulta_1 (prefab fields)
-		catapulta_1.power = 500;
 
 		this.bg1Tile = bg1Tile;
 		this.tilespriteBG = tilespriteBG;

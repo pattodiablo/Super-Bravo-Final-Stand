@@ -255,12 +255,30 @@ class MenuPrefab extends Phaser.GameObjects.Container {
 		}).on('pointerout', () => {
 			this.menuOpt2.setScale(1);
 		});
-		this.menuOpt3.setInteractive().on('pointerdown', () => console.log('Exit to map clicked')).on('pointerover', () => {
+		this.menuOpt3.setInteractive().on('pointerdown', () => {
+			
+			const baseScene = this.scene.scene.get(this.scene.sourceSceneKey);
+			if (baseScene) {
+				this.scene.scene.remove(baseScene.scene.key);
+			}
+			this.scene.scene.stop("SettingsOverlay");
+			const interludeMap = this.scene.scene.get("InterludeMap");
+			if (interludeMap && interludeMap.setLevel) {
+				interludeMap.setLevel(this.scene.sourceSceneKey, 1, 1, 0, 0, true);
+			}
+			this.scene.scene.start("InterludeMap");
+
+		}).on('pointerover', () => {
 			this.scene.tweens.add({ targets: this.menuOpt3, scaleX: 1.12, scaleY: 1.12, duration: 120, yoyo: true, ease: 'Back.Out' });
 		}).on('pointerout', () => {
 			this.menuOpt3.setScale(1);
 		});
-		this.menuOpt4.setInteractive().on('pointerdown', () => console.log('Reset Game clicked')).on('pointerover', () => {
+		this.menuOpt4.setInteractive().on('pointerdown', () => {
+			window.localStorage.setItem("lastCompletedLevel", "");
+				window.location.reload();
+			const baseScene = this.scene.sourceSceneKey ? this.scene.scene.get(this.scene.sourceSceneKey) : null;
+			
+		}).on('pointerover', () => {
 			this.scene.tweens.add({ targets: this.menuOpt4, scaleX: 1.12, scaleY: 1.12, duration: 120, yoyo: true, ease: 'Back.Out' });
 		}).on('pointerout', () => {
 			this.menuOpt4.setScale(1);

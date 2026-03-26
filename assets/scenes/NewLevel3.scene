@@ -19,7 +19,6 @@
             "id": "bd618ef4-f589-480a-9a9a-c6abdeb6f3b0",
             "label": "bg1Tile",
             "scope": "CLASS",
-            "components": [],
             "texture": {
                 "key": "bg2Tile"
             },
@@ -35,7 +34,7 @@
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "bg2TileBG"
+                "key": "newBg1"
             },
             "originX": 0,
             "originY": 1,
@@ -51,15 +50,13 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "components": [],
-            "x": 91,
-            "y": 599
+            "x": 121,
+            "y": 655
         },
         {
             "type": "TilemapLayer",
             "id": "b9b5d5fb-a2a3-4191-bb00-2aae756c13f4",
             "label": "nocollide",
-            "components": [],
             "tilemapId": "79b2c55a-8226-461e-ac8e-ecebabdfb62c",
             "layerName": "nocollide2",
             "tilesets": [
@@ -70,7 +67,6 @@
             "type": "TilemapLayer",
             "id": "a157ede7-e9d1-4e7b-bf77-e68a7372bb7b",
             "label": "nocollide_1",
-            "components": [],
             "tilemapId": "79b2c55a-8226-461e-ac8e-ecebabdfb62c",
             "layerName": "nocollide",
             "tilesets": [
@@ -82,7 +78,6 @@
             "id": "32955962-0200-4250-879c-b1001bd08ff8",
             "label": "layer",
             "scope": "CLASS",
-            "components": [],
             "tilemapId": "79b2c55a-8226-461e-ac8e-ecebabdfb62c",
             "layerName": "layer",
             "tilesets": [
@@ -99,9 +94,8 @@
             ],
             "label": "catapulta",
             "power": 700,
-            "components": [],
-            "x": 287,
-            "y": 436
+            "x": 1455,
+            "y": 688
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -111,16 +105,14 @@
                 "y"
             ],
             "label": "heart",
-            "components": [],
-            "x": 293,
-            "y": 606
+            "x": 818,
+            "y": 181
         },
         {
             "type": "TilemapLayer",
             "id": "458ec213-da32-4b79-8bf8-b1cab047de5d",
             "label": "upperTile",
             "scope": "CLASS",
-            "components": [],
             "tilemapId": "b8564cdd-58f0-460f-8bf5-51cf64b9eaca",
             "layerName": "upperTile",
             "tilesets": [
@@ -135,9 +127,8 @@
                 "y"
             ],
             "label": "sampoShooter",
-            "components": [],
-            "x": 430,
-            "y": 87
+            "x": 485,
+            "y": 228
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -151,9 +142,8 @@
             "label": "sampoShooter_1",
             "RevivingPodID": "pod1",
             "EnemyID": 1,
-            "components": [],
-            "x": 1037,
-            "y": 648
+            "x": 1061,
+            "y": 228
         },
         {
             "prefabId": "3305649f-477c-45f5-a110-8182010b02f0",
@@ -167,10 +157,19 @@
             "label": "enemyCreator",
             "creationTime": 3000,
             "enemyID": "1",
-            "components": [],
-            "x": 1167,
-            "y": 538,
-            "nestedPrefabs": []
+            "x": 1292,
+            "y": 413
+        },
+        {
+            "prefabId": "dae0c595-f7aa-48e4-92ff-be93ff062d2a",
+            "id": "52dfac62-06cc-48e7-b281-20c68bb835ed",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "blobber",
+            "x": 621,
+            "y": 464
         }
     ],
     "plainObjects": [
@@ -200,10 +199,10 @@
         }
     ],
     "meta": {
-        "app": "Phaser Editor 2D - Scene Editor",
-        "url": "https://phasereditor2d.com",
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "lists": [
         {
@@ -222,7 +221,8 @@
             "label": "enemies",
             "objectIds": [
                 "b93c9461-6c46-4bce-bf35-0645a81b83bb",
-                "cc09df9d-77b2-4c5a-9570-59ec1fb50d59"
+                "cc09df9d-77b2-4c5a-9570-59ec1fb50d59",
+                "52dfac62-06cc-48e7-b281-20c68bb835ed"
             ]
         },
         {

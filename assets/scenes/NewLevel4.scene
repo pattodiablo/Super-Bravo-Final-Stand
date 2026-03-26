@@ -34,7 +34,7 @@
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "bg2TileBG"
+                "key": "newBg1"
             },
             "originX": 0,
             "originY": 1,
@@ -81,8 +81,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 852,
-            "y": 738
+            "x": 80,
+            "y": 383
         },
         {
             "type": "TilemapLayer",
@@ -97,17 +97,6 @@
             ]
         },
         {
-            "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
-            "id": "03dbf622-e278-4791-b44a-e8d2cf0e3576",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "catapulta",
-            "x": 849,
-            "y": 787
-        },
-        {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
             "id": "2bbe7c90-530b-4ae0-9267-6ecd504d545e",
             "unlock": [
@@ -115,8 +104,8 @@
                 "y"
             ],
             "label": "drone",
-            "x": 840,
-            "y": 77
+            "x": 990,
+            "y": 245
         },
         {
             "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
@@ -124,12 +113,14 @@
             "unlock": [
                 "x",
                 "y",
-                "IsFirstCannon"
+                "IsFirstCannon",
+                "angle"
             ],
             "label": "portalCannon",
             "IsFirstCannon": true,
-            "x": 382,
-            "y": 736
+            "x": 1489,
+            "y": 374,
+            "angle": -180
         },
         {
             "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
@@ -142,9 +133,9 @@
             ],
             "label": "portalCannon_1",
             "IsFirstCannon": false,
-            "x": 381,
-            "y": 102,
-            "angle": 90
+            "x": 286,
+            "y": 34,
+            "angle": -123
         },
         {
             "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
@@ -157,9 +148,9 @@
             ],
             "label": "portalCannon_1_1",
             "IsFirstCannon": false,
-            "x": 1314,
-            "y": 612,
-            "angle": -90
+            "x": 287,
+            "y": 743,
+            "angle": 0
         },
         {
             "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
@@ -167,12 +158,14 @@
             "unlock": [
                 "x",
                 "y",
-                "IsFirstCannon"
+                "IsFirstCannon",
+                "angle"
             ],
             "label": "portalCannon_2",
             "IsFirstCannon": true,
-            "x": 1311,
-            "y": 736
+            "x": 1490,
+            "y": 743,
+            "angle": -90
         },
         {
             "prefabId": "6afa43fe-4a45-41e6-9689-146c20a9cf1c",
@@ -184,32 +177,8 @@
             ],
             "label": "upgradeHalo",
             "isCannonStrike": true,
-            "x": 849,
-            "y": 577
-        },
-        {
-            "type": "Image",
-            "id": "dc62a87e-221d-49d3-94ce-3463fae3cfee",
-            "label": "powerPodium",
-            "texture": {
-                "key": "PowerPodium"
-            },
-            "x": 849,
-            "y": 588,
-            "scaleX": 0.6582278481012658,
-            "scaleY": 0.6582278481012658,
-            "angle": -180
-        },
-        {
-            "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
-            "id": "be548645-d9e0-4ebb-ae21-89f877daa3aa",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "heart",
-            "x": 74,
-            "y": 238
+            "x": 896,
+            "y": 368
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -219,8 +188,8 @@
                 "y"
             ],
             "label": "heart_1",
-            "x": 1075,
-            "y": 457
+            "x": 545,
+            "y": 45
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -230,8 +199,8 @@
                 "y"
             ],
             "label": "sampoShooter",
-            "x": 1177,
-            "y": 482
+            "x": 1198,
+            "y": 443
         },
         {
             "prefabId": "3305649f-477c-45f5-a110-8182010b02f0",
@@ -241,21 +210,43 @@
                 "y"
             ],
             "label": "enemyCreator",
-            "x": 604,
-            "y": 378
+            "x": 611,
+            "y": 251
         },
         {
-            "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
-            "id": "fdb4b91e-11c5-4925-8efd-1fe086f05762",
+            "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
+            "id": "1b374f4b-5d4a-4373-b074-d979109be6cb",
             "unlock": [
                 "x",
-                "y",
-                "power"
+                "y"
             ],
-            "label": "catapulta_1",
-            "power": 500,
-            "x": 144,
-            "y": 560
+            "label": "sampoShooter_1",
+            "x": 504,
+            "y": 87
+        },
+        {
+            "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
+            "id": "98f802b4-5c56-407f-abf9-562d1414fc7f",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "sampoShooter_2",
+            "x": 1256,
+            "y": 75
+        },
+        {
+            "type": "Image",
+            "id": "f5108b89-6a4e-4063-a7a3-1e8f00d81de9",
+            "label": "energyStation_instance_10000",
+            "texture": {
+                "key": "props",
+                "frame": "energyStation instance 10000"
+            },
+            "x": 897,
+            "y": 382,
+            "scaleX": 0.5,
+            "scaleY": 0.5
         }
     ],
     "plainObjects": [
@@ -306,7 +297,9 @@
             "id": "5b8b5385-7170-4f04-8368-32349b8524e7",
             "label": "enemies",
             "objectIds": [
-                "c491141e-216d-4315-bbcd-61ca2ac4fab4"
+                "c491141e-216d-4315-bbcd-61ca2ac4fab4",
+                "1b374f4b-5d4a-4373-b074-d979109be6cb",
+                "98f802b4-5c56-407f-abf9-562d1414fc7f"
             ]
         },
         {
