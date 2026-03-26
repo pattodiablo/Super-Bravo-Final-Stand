@@ -19,15 +19,18 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 	/* START-USER-CODE */
 
 	create(){
-
+	
+		this._initialized = true;
+		console.log("CannonRoll created");
 		this.isBeingfired = false;
+		this.lastPortalCannon = null;
 		this.body.setCircle(13,7,5);
 		
 	
 		this.initColliders();
 
 		this.particles = this.scene.add.particles('flares');
-		var tree = new Phaser.Geom.Triangle.BuildEquilateral(0, -10, 40);
+
 		this.particles.createEmitter({
 			frame: "flare30000",
 			scale: { start: 0.4, end: 0.1 },
@@ -53,51 +56,32 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 	}
 
 	catapultePlayer(rolledPlayer, cannon){
-	if(this.scene.player.isFiredfromCannon){
-		if(this.Killtimer !==null){
-		//	this.Killtimer.destroy();
-	}
+		if (!this.scene.player.isFiredfromCannon) {
+			return;
+		}
 
-	if(this.isBeingfired){
-	
-		this.body.enable=true;
-	}else{
+		if (this.lastPortalCannon === cannon) {
+			return;
+		}
+
+		this.lastPortalCannon = cannon;
 
 		this.body.velocity.x = 0;
 		this.body.velocity.y = 0;
-		this.visible=true;
-		this.x=cannon.x;
-		this.y=cannon.y;
-		this.body.enable=false;
-	
-	var catapulttime = this.scene.time.addEvent({
-		delay: 200,                // ms
-		callback: function(){
-			rolledPlayer.isBeingfired=true;
-			rolledPlayer.body.enable=true;
-			rolledPlayer.scene.physics.velocityFromAngle(cannon.angle-90,600, rolledPlayer.body.velocity);//chequear
-			var coolDownTimer = this.scene.time.addEvent({
-				delay: 200,                // ms
-				callback: function(){
-					this.isBeingfired=false;
-				
-				},
-				//args: [],
-				callbackScope: this,
-				loop: false
-			});
-		},
-		//args: [],
-		callbackScope: this,
-		loop: false
-	});
+		this.visible = true;
+		this.x = cannon.x;
+		this.y = cannon.y;
+		this.body.enable = true;
 
-	this.timeToStopFlying();
-
-}
-	}
-	
-
+		this.scene.time.addEvent({
+			delay: 300,
+			callback: function () {
+				rolledPlayer.body.enable = true;
+				rolledPlayer.scene.physics.velocityFromAngle(cannon.angle - 90, 600, rolledPlayer.body.velocity);
+			},
+			callbackScope: this,
+			loop: false
+		});
 	}
 
 	timeToStopFlying(){
@@ -149,6 +133,7 @@ class CannonRoll extends Phaser.GameObjects.Sprite {
 		if(	this.scene.player.isFiredfromCannon){
 			this.scene.player.visible = true;
 			this.scene.player.isFiredfromCannon=false;
+			this.isBeingfired = false;
 				this.scene.player.body.enable = true;
 				this.scene.player.x = this.x;
 				this.scene.player.y = this.y;

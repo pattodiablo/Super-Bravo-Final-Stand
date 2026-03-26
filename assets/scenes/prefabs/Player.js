@@ -1277,6 +1277,10 @@ class Player extends Phaser.GameObjects.Sprite {
 
 
 		if (this.wannaBite) {
+			if (this.isFiredfromCannon || (this.cannonRoll && this.cannonRoll.active)) {
+				this.wannaBite = false;
+				return;
+			}
 
 		
 			this.scene.player.currentArrow = 0;
@@ -1285,20 +1289,18 @@ class Player extends Phaser.GameObjects.Sprite {
 			this.body.setVelocity(0);
 
 
-			this.body.enable = false;
-
 			this.scene.cameras.main.shake();
 			this.waitingfortarget = true;
 
 			this.cannonRoll = new CannonRoll(this.scene, this.x, this.y);
 			this.scene.add.existing(this.cannonRoll);
+			this.body.enable = false;
 			this.cannonRoll.emit("prefab-awake");
 			this.scene.cannonRollPack.push(this.cannonRoll);
 			this.scene.cameras.main.stopFollow(this);
 			this.scene.cameras.main.startFollow(this.cannonRoll,true, 0.4, 0.04);
 
-
-				
+		
 			var animateRoll = this.scene.tweens.createTimeline();
 			animateRoll.add({
 				targets: this.cannonRoll,
@@ -1310,13 +1312,19 @@ class Player extends Phaser.GameObjects.Sprite {
 
 			});
 
-			animateRoll.play();
+			this.scene.time.delayedCall(50, function () {
+				animateRoll.play();
+			}, null, this);
 
 			this.scene.cameras.main.flash();						
 			this.isFiredfromCannon=true;
 			this.isBiting = false;
 			this.wannaBite = false;
+
+
 	}	}
+
+		
 
 	checkIfSuperRoll() { //Supa Roll
 		if (this.wannaRoll) {
@@ -1495,6 +1503,7 @@ class Player extends Phaser.GameObjects.Sprite {
 		this.checkIfEnterPod();
 		this.checkIfHasPowerUps();
 		this.checkIfSupaBite();
+	
 		this.enableKeyBoard();
 
 		if (this.isJetPackActive) {
