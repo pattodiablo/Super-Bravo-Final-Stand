@@ -162,7 +162,7 @@
                 "angle"
             ],
             "label": "portalCannon_2",
-            "IsFirstCannon": true,
+            "IsFirstCannon": false,
             "x": 1490,
             "y": 743,
             "angle": -90

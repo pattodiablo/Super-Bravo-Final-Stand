@@ -39,11 +39,11 @@ class NewLevel5 extends BaseScene {
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg1TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg1");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide2", [], 0, 0);
 
 		// nocollide
 		mapa.createLayer("nocollide", ["new_ciudad_tiles"], 0, 0);
@@ -52,29 +52,25 @@ class NewLevel5 extends BaseScene {
 		const layer = mapa.createLayer("layer", ["new_ciudad_tiles"], 0, 0);
 
 		// player
-		const player = new Player(this, 102, 677);
+		const player = new Player(this, 879, 623);
 		this.add.existing(player);
 
 		// platform2
-		const platform2 = new Platform2(this, 1456, 692);
+		const platform2 = new Platform2(this, 1406, 610);
 		this.add.existing(platform2);
 		platform2.scaleX = 0.9297357828236776;
 		platform2.scaleY = 0.9297357828236776;
 
-		// angrySpin
-		const angrySpin = new AngrySpin(this, 353, 659);
-		this.add.existing(angrySpin);
-
 		// sampoShooter
-		const sampoShooter = new SampoShooter(this, 724, 673);
+		const sampoShooter = new SampoShooter(this, 402, 612);
 		this.add.existing(sampoShooter);
 
 		// sampoShooter_1
-		const sampoShooter_1 = new SampoShooter(this, 1082, 675);
+		const sampoShooter_1 = new SampoShooter(this, 1084, 641);
 		this.add.existing(sampoShooter_1);
 
 		// enemyCreator
-		const enemyCreator = new EnemyCreator(this, 943, 344);
+		const enemyCreator = new EnemyCreator(this, 406, 541);
 		this.add.existing(enemyCreator);
 
 		// misile
@@ -82,7 +78,7 @@ class NewLevel5 extends BaseScene {
 		this.add.existing(misile);
 
 		// upperTile
-		const upperTile = new_level5_1.createLayer("upperTile", ["new_ciudad_tiles"], 0, 0);
+		const upperTile = new_level5_1.createLayer("upperTile", [], 0, 0);
 
 		// platform2_1
 		const platform2_1 = new Platform2(this, 111, 436);
@@ -91,7 +87,7 @@ class NewLevel5 extends BaseScene {
 		platform2_1.scaleY = 0.9297357828236776;
 
 		// sampoShooter_2
-		const sampoShooter_2 = new SampoShooter(this, 452, 384);
+		const sampoShooter_2 = new SampoShooter(this, 439, 329);
 		this.add.existing(sampoShooter_2);
 
 		// misile_1
@@ -101,70 +97,45 @@ class NewLevel5 extends BaseScene {
 		misile_1.flipY = false;
 
 		// blobber
-		const blobber = new Blobber(this, 412, 124);
+		const blobber = new Blobber(this, 168, 532);
 		this.add.existing(blobber);
 
 		// angrySpin_1
-		const angrySpin_1 = new AngrySpin(this, 875, 208);
+		const angrySpin_1 = new AngrySpin(this, 882, 318);
 		this.add.existing(angrySpin_1);
 
-		// sideDoorLocked
-		const sideDoorLocked = new SideDoorLocked(this, 641, 386);
-		this.add.existing(sideDoorLocked);
-		sideDoorLocked.scaleX = 0.8201992306265096;
-		sideDoorLocked.scaleY = 0.8201992306265096;
-
-		// toll
-		const toll = new Toll(this, 781, 685);
-		this.add.existing(toll);
-
-		// drone
-		const drone = new Drone(this, 1457, 341);
-		this.add.existing(drone);
-
 		// drone_1
-		const drone_1 = new Drone(this, 116, 125);
+		const drone_1 = new Drone(this, 135, 155);
 		this.add.existing(drone_1);
 
-		// sampoShooter_3
-		const sampoShooter_3 = new SampoShooter(this, 1122, 431);
-		this.add.existing(sampoShooter_3);
-
-		// sampoShooter_3_1
-		const sampoShooter_3_1 = new SampoShooter(this, 1278, 430);
-		this.add.existing(sampoShooter_3_1);
-
 		// enemyCreator_1
-		const enemyCreator_1 = new EnemyCreator(this, 1200, 128);
+		const enemyCreator_1 = new EnemyCreator(this, 1047, 158);
 		this.add.existing(enemyCreator_1);
 
-		// sideDoorLocked_1
-		const sideDoorLocked_1 = new SideDoorLocked(this, 1294, 303);
-		this.add.existing(sideDoorLocked_1);
-		sideDoorLocked_1.scaleX = 0.542024887280187;
-		sideDoorLocked_1.scaleY = 0.542024887280187;
-		sideDoorLocked_1.angle = -90;
-
-		// toll_1
-		const toll_1 = new Toll(this, 718, 237);
-		this.add.existing(toll_1);
-
 		// catapulta
-		const catapulta = new Catapulta(this, 1295, 365);
+		const catapulta = new Catapulta(this, 1211, 341);
 		this.add.existing(catapulta);
 
 		// heart
-		const heart = new Heart(this, 1494, 187);
+		const heart = new Heart(this, 1408, 196);
 		this.add.existing(heart);
 
 		// heart_1
-		const heart_1 = new Heart(this, 717, 151);
+		const heart_1 = new Heart(this, 717, 166);
 		this.add.existing(heart_1);
+
+		// catapulta_1
+		const catapulta_1 = new Catapulta(this, 565, 341);
+		this.add.existing(catapulta_1);
+
+		// sideDoor
+		const sideDoor = new SideDoor(this, 281, 596);
+		this.add.existing(sideDoor);
 
 		// lists
 		const doors = [];
 		const switches = [];
-		const enemies = [angrySpin, sampoShooter_2, sampoShooter_3_1, sampoShooter_3];
+		const enemies = [sampoShooter_2, angrySpin_1, drone_1, blobber, sampoShooter_1, sampoShooter];
 		const platforms = [platform2, platform2_1];
 		const coins = [];
 		const catapultas = [];
@@ -182,28 +153,14 @@ class NewLevel5 extends BaseScene {
 		platform2_1.distance = 160;
 		platform2_1.timeTravel = 3000;
 
-		// toll (prefab fields)
-		toll.tollCost = 10;
-
-		// sampoShooter_3 (prefab fields)
-		sampoShooter_3.RevivingPodID = "pod2";
-
-		// sampoShooter_3_1 (prefab fields)
-		sampoShooter_3_1.RevivingPodID = "pod2";
-
 		// enemyCreator_1 (prefab fields)
 		enemyCreator_1.PodID = "pod2";
 
-		// sideDoorLocked_1 (prefab fields)
-		sideDoorLocked_1.LockedBy = "2";
-		sideDoorLocked_1.doorID = "2";
-
-		// toll_1 (prefab fields)
-		toll_1.tollCost = 30;
-		toll_1.LockId = "2";
-
 		// catapulta (prefab fields)
 		catapulta.power = 800;
+
+		// catapulta_1 (prefab fields)
+		catapulta_1.power = 800;
 
 		this.bg1Tile = bg1Tile;
 		this.tilespriteBG = tilespriteBG;
@@ -221,7 +178,7 @@ class NewLevel5 extends BaseScene {
 		this.catapultas = catapultas;
 		this.revivingPods = revivingPods;
 		this.tutorials = tutorials;
-		this.nextLevel = "NewLevel6";
+
 		this.events.emit("scene-awake");
 	}
 
@@ -245,7 +202,7 @@ class NewLevel5 extends BaseScene {
 	doors;
 	/** @type {Array<any>} */
 	switches;
-	/** @type {Array<AngrySpin|SampoShooter>} */
+	/** @type {Array<SampoShooter|AngrySpin|Drone|Blobber>} */
 	enemies;
 	/** @type {Platform2[]} */
 	platforms;

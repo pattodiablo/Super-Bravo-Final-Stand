@@ -1334,7 +1334,12 @@ class Player extends Phaser.GameObjects.Sprite {
 			this.wannaBite = false;
 
 
-	}	}
+	}	
+	if(this.isFiredfromCannon){
+		this.body.setVelocity(0);
+		this.body.enable = false;
+	}
+}
 
 		
 

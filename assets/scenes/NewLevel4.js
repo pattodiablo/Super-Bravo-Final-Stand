@@ -130,7 +130,7 @@ class NewLevel4 extends BaseScene {
 		portalCannon_1_1.IsFirstCannon = false;
 
 		// portalCannon_2 (prefab fields)
-		portalCannon_2.IsFirstCannon = true;
+		portalCannon_2.IsFirstCannon = false;
 
 		// upgradeHalo (prefab fields)
 		upgradeHalo.isCannonStrike = true;

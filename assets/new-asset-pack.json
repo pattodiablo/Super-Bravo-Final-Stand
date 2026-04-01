@@ -1040,6 +1040,11 @@
                 "key": "newBg1"
             },
             {
+                "url": "assets/images/newBg2.png",
+                "type": "image",
+                "key": "newBg2"
+            },
+            {
                 "url": "assets/newPropsAnimations.json",
                 "type": "animation",
                 "key": "newPropsAnimations"

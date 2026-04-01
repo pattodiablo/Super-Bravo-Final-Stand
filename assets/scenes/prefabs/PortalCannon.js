@@ -35,6 +35,7 @@ class PortalCannon extends Phaser.GameObjects.Sprite {
 			this.scene.physics.add.overlap(this.scene.player, this, this.checkCollision, null, this);
 		}
 		this.setDepth(this.scene.player.depth+1);
+		this.updatePowerUpState();
 
 		this.isRotationActive =  false;
 
@@ -110,6 +111,28 @@ class PortalCannon extends Phaser.GameObjects.Sprite {
 			this.scene.portalCannons.push(this);
 	}
 
+	updatePowerUpState() {
+		const canUsePortalCannons = this.scene.player && (this.scene.player.supaBiteChances > 0 || this.scene.game.playerData.gotCannon);
+
+		if (canUsePortalCannons) {
+			this.setInteractive();
+			this.clearTint();
+			this.setAlpha(1);
+			return;
+		}
+
+		if (this.input) {
+			this.disableInteractive();
+		}
+
+		this.setTint(0x9a9a9a);
+		this.setAlpha(0.45);
+		if (this.ring) {
+			this.ring.visible = false;
+		}
+		this.isRotationActive = false;
+	}
+
 	checkCollision(player, cannon){
 			if(!player){
 			return;
@@ -125,6 +148,11 @@ class PortalCannon extends Phaser.GameObjects.Sprite {
 	
 
 	update(){
+		this.updatePowerUpState();
+
+		if (!this.input || !this.input.enabled) {
+			return;
+		}
 
 		this.distanceToPlayer = Phaser.Math.Distance.Between(this.scene.player.x, this.scene.player.y, this.x, this.y);
 		

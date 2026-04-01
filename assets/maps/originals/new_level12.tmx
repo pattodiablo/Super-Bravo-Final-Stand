@@ -5,9 +5,19 @@
  </editorsettings>
  <tileset firstgid="1" name="new_ciudad_tiles" tilewidth="32" tileheight="32" tilecount="435" columns="29">
   <image source="../../environment/new_ciudad_tiles.png" width="941" height="480"/>
-  <tile id="38">
+  <tile id="28">
    <properties>
-    <property name="name" value="transparente"/>
+    <property name="name" value="invisible"/>
+   </properties>
+  </tile>
+  <tile id="57">
+   <properties>
+    <property name="name" value="speed"/>
+   </properties>
+  </tile>
+  <tile id="86">
+   <properties>
+    <property name="name" value="coin"/>
    </properties>
   </tile>
   <tile id="88">
@@ -25,31 +35,32 @@
     <property name="name" value="coin"/>
    </properties>
   </tile>
-  <tile id="276">
-   <properties>
-    <property name="name" value="locked"/>
-   </properties>
-  </tile>
-  <tile id="278">
-   <properties>
-    <property name="name" value="destroyable"/>
-   </properties>
-  </tile>
-  <tile id="388">
-   <properties>
-    <property name="name" value="downFloor"/>
-   </properties>
-  </tile>
-  <tile id="390">
-   <properties>
-    <property name="name" value="door"/>
-   </properties>
-  </tile>
-  <tile id="392">
+  <tile id="115">
    <properties>
     <property name="name" value="acid"/>
    </properties>
   </tile>
+  <tile id="144">
+   <properties>
+    <property name="name" value="locked"/>
+   </properties>
+  </tile>
+  <tile id="173">
+   <properties>
+    <property name="name" value="destroyable"/>
+   </properties>
+  </tile>
+  <tile id="202">
+   <properties>
+    <property name="name" value="downFloor"/>
+   </properties>
+  </tile>
+  <tile id="231">
+   <properties>
+    <property name="name" value="door"/>
+   </properties>
+  </tile>
+  
  </tileset>
  <layer id="3" name="nocollide2" width="50" height="27">
   <data encoding="csv">

@@ -35,7 +35,7 @@ class NewLevel6 extends BaseScene {
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg3TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg2");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
