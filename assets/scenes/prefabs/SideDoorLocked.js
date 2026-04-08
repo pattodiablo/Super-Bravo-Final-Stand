@@ -36,7 +36,7 @@ class SideDoorLocked extends Phaser.GameObjects.Sprite {
 			this.isopen = false;
 			this.isLocked = true;
 			this.scene.sideDoors.push(this);
-			
+			console.log("side doors locked", this.scene.sideDoors);
 		}
 
 		initColliders(){

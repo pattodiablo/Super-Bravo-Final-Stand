@@ -27,14 +27,14 @@
         },
         {
             "type": "TileSprite",
-            "id": "64af4b89-0cec-4f39-b2d9-5efd86f69384",
+            "id": "5aeb4fc4-41a7-4688-9c84-c58db237712a",
             "label": "tilespriteBG",
             "scope": "CLASS",
             "components": [
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "bg2TileBG"
+                "key": "newBg3"
             },
             "originX": 0,
             "originY": 1,

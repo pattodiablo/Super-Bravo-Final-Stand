@@ -25,6 +25,13 @@ class Toll extends Phaser.GameObjects.Sprite {
 
 	/** @type {number} */
 	tollCost = 200;
+	get totalCost() {
+		return this.tollCost;
+	}
+
+	set totalCost(value) {
+		this.tollCost = value;
+	}
 	/** @type {string} */
 	LockId = "1";
 
@@ -90,11 +97,11 @@ class Toll extends Phaser.GameObjects.Sprite {
 	}
 
 	checkAndOpen(player,toll){
-
+console.log(player.scene.coinsCollected, toll.totalCost	);
 		if(player.isDropping && !toll.islocked){
 			this.scene.cameras.main.flash();
-			var currentMoney =  player.scene.game.playerData.coins;
-			if(currentMoney >=toll.tollCost){
+			var currentMoney =  player.scene.coinsCollected;
+			if(currentMoney >= toll.totalCost){
 
 				toll.isLevel5 = true;
 				this.scene.envi_sideswitch_01.play();
@@ -110,7 +117,7 @@ class Toll extends Phaser.GameObjects.Sprite {
 				toll.scene.sideDoors.forEach(door => {
 
 					if(door.LockedBy == toll.LockId){
-
+						console.log("puerta desbloqueada por el peaje " + toll.LockId);
 						door.isLocked = false;
 						door.setTint("0xffffff");
 
@@ -122,10 +129,10 @@ class Toll extends Phaser.GameObjects.Sprite {
 				//this.scene.envi_tollerror_01.play();
 				this.scene.envi_tollerror_02.play();
 
-				var valorCadaBarra = toll.tollCost / 5;
+				var valorCadaBarra = toll.totalCost / 5;
 
 					//console.log("no tengo plata solo tengo " + currentMoney + "y eso cuesta " + toll.tollCost )
-					var diffToll = toll.tollCost - currentMoney;
+					var diffToll = toll.totalCost - currentMoney;
 				//	this.textBox=this.scene.createTextBox(this.x-40,this.y-100, diffToll+" rings to go");
 
 					var reloadTimer = this.scene.time.addEvent({

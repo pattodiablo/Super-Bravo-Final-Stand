@@ -35,24 +35,24 @@ class NewLevel11 extends BaseScene {
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg2TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg3");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide2", [], 0, 0);
 
 		// nocollide
-		mapa.createLayer("nocollide", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide", [], 0, 0);
 
 		// layer
-		const layer = mapa.createLayer("layer", ["new_ciudad_tiles"], 0, 0);
+		const layer = mapa.createLayer("layer", [], 0, 0);
 
 		// player
 		const player = new Player(this, 118, 747);
 		this.add.existing(player);
 
 		// upperTile_1
-		new_level11.createLayer("upperTile", ["new_ciudad_tiles"], 0, 0);
+		new_level11.createLayer("upperTile", [], 0, 0);
 
 		// card
 		const card = new Card(this, 1441, 88);

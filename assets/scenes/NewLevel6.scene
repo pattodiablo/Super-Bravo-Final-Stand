@@ -27,7 +27,7 @@
         },
         {
             "type": "TileSprite",
-            "id": "64af4b89-0cec-4f39-b2d9-5efd86f69384",
+            "id": "783e20a9-0ab9-4b80-9256-3ab1f3e7f6e3",
             "label": "tilespriteBG",
             "scope": "CLASS",
             "components": [
@@ -43,9 +43,9 @@
         },
         {
             "type": "TilemapLayer",
-            "id": "313d3c67-0555-4fe7-b4f9-9a9c76d4305c",
-            "label": "nocollide2_1",
-            "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
+            "id": "1294840f-9662-4212-845f-53ab3a3a275a",
+            "label": "nocollide",
+            "tilemapId": "90eea0f0-495e-4f3f-b631-c19a37807132",
             "layerName": "nocollide2",
             "tilesets": [
                 "new_ciudad_tiles"
@@ -53,23 +53,66 @@
         },
         {
             "type": "TilemapLayer",
-            "id": "ba45af92-dd29-4b67-bdf6-8c50bf71dcd1",
-            "label": "nocollide",
-            "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
+            "id": "a67899d5-3499-459e-b3b2-59bde0fa579b",
+            "label": "nocollide_1",
+            "scope": "CLASS",
+            "tilemapId": "73cf159c-4a09-45b8-bcbc-ffac3b10c3c3",
             "layerName": "nocollide",
             "tilesets": [
-                "new_ciudad_tiles"
+                "late_woods_tiles"
+            ]
+        },
+        {
+            "type": "Image",
+            "id": "e2e180e1-fab8-4d90-9cb0-8ca24c83261b",
+            "label": "powerPodium",
+            "texture": {
+                "key": "PowerPodium"
+            },
+            "x": 1760,
+            "y": 447
+        },
+        {
+            "prefabId": "132851fc-10a4-452c-a832-422ff1f6d7b1",
+            "id": "f2b8fbd9-e680-4088-80a1-a9371cde11c6",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "sideDoorLocked",
+            "x": 1666,
+            "y": 445
+        },
+        {
+            "prefabId": "132851fc-10a4-452c-a832-422ff1f6d7b1",
+            "id": "4ed94618-a6c6-474e-929c-d9ee7dcecbd3",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "sideDoorLocked_1",
+            "x": 1859,
+            "y": 445
+        },
+        {
+            "type": "TilemapLayer",
+            "id": "462381fa-bceb-449c-a75e-5eb2361ce404",
+            "label": "layer",
+            "scope": "CLASS",
+            "tilemapId": "5c597127-acc1-4233-9547-90aec807b4f2",
+            "layerName": "layer",
+            "tilesets": [
+                "late_woods_tiles"
             ]
         },
         {
             "type": "TilemapLayer",
-            "id": "1e095778-25a2-436b-a00d-7c82f4d10f2b",
-            "label": "layer",
-            "scope": "CLASS",
-            "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
-            "layerName": "layer",
+            "id": "224308e7-57cb-48a0-a6ba-d669797e8845",
+            "label": "Uppertile",
+            "tilemapId": "3343b77e-711b-4fb6-9cf7-783de022ad9c",
+            "layerName": "upperTile",
             "tilesets": [
-                "new_ciudad_tiles"
+                "late_woods_tiles"
             ]
         },
         {
@@ -85,102 +128,17 @@
             "y": 707
         },
         {
-            "type": "TilemapLayer",
-            "id": "d565e784-69a0-4233-845c-51bc1a6e4635",
-            "label": "upperTile",
-            "scope": "CLASS",
-            "tilemapId": "67ecd760-fbda-4f59-bf35-c424dad395f6",
-            "layerName": "upperTile",
-            "tilesets": [
-                "new_ciudad_tiles"
-            ]
-        },
-        {
             "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
             "id": "b6100c12-b34e-4495-bc4c-600491a4df15",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "power"
             ],
             "label": "catapulta",
-            "x": 79,
+            "power": 500,
+            "x": 257,
             "y": 495
-        },
-        {
-            "type": "Image",
-            "id": "e2e180e1-fab8-4d90-9cb0-8ca24c83261b",
-            "label": "powerPodium",
-            "texture": {
-                "key": "PowerPodium"
-            },
-            "x": 672,
-            "y": 225
-        },
-        {
-            "prefabId": "132851fc-10a4-452c-a832-422ff1f6d7b1",
-            "id": "f2b8fbd9-e680-4088-80a1-a9371cde11c6",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "sideDoorLocked",
-            "x": 1473,
-            "y": 109
-        },
-        {
-            "type": "Image",
-            "id": "0d7b55fa-1a32-41cc-a2a4-1c3289249b70",
-            "label": "alert_instance_10000",
-            "texture": {
-                "key": "misile",
-                "frame": "alert instance 10000"
-            },
-            "x": 1114,
-            "y": 676
-        },
-        {
-            "type": "Image",
-            "id": "c94f3e41-96a2-48b6-8dc2-e2aece05b8c1",
-            "label": "alert_instance_10000_1",
-            "texture": {
-                "key": "misile",
-                "frame": "alert instance 10000"
-            },
-            "x": 1898,
-            "y": 672
-        },
-        {
-            "type": "Image",
-            "id": "3a048368-0119-46de-a01a-dea9a1b360d3",
-            "label": "alert_instance_10000_1_1",
-            "texture": {
-                "key": "misile",
-                "frame": "alert instance 10000"
-            },
-            "x": 1716,
-            "y": 672
-        },
-        {
-            "type": "Image",
-            "id": "dc0f697b-89ac-4f51-9b83-87d8412fd56a",
-            "label": "alert_instance_10000_1_1_1",
-            "texture": {
-                "key": "misile",
-                "frame": "alert instance 10000"
-            },
-            "x": 1295,
-            "y": 667
-        },
-        {
-            "type": "Image",
-            "id": "1f58089f-0166-40bf-8c12-1ca2c7d1c0b6",
-            "label": "alert_instance_10000_1_1_1_1",
-            "texture": {
-                "key": "misile",
-                "frame": "alert instance 10000"
-            },
-            "x": 2283,
-            "y": 671
         },
         {
             "type": "Image",
@@ -190,8 +148,8 @@
                 "key": "misile",
                 "frame": "alert instance 10000"
             },
-            "x": 2508,
-            "y": 643
+            "x": 2842,
+            "y": 542
         },
         {
             "prefabId": "0b6a9364-c0e7-4115-8dc4-c0a13d50343a",
@@ -202,9 +160,9 @@
                 "tollCost"
             ],
             "label": "toll",
-            "tollCost": 20,
-            "x": 1217,
-            "y": 398
+            "tollCost": 12,
+            "x": 1282,
+            "y": 499
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -214,8 +172,8 @@
                 "y"
             ],
             "label": "supaBomb",
-            "x": 765,
-            "y": 678
+            "x": 737,
+            "y": 682
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -225,8 +183,8 @@
                 "y"
             ],
             "label": "supaBomb_1",
-            "x": 966,
-            "y": 379
+            "x": 535,
+            "y": 687
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -236,8 +194,8 @@
                 "y"
             ],
             "label": "supaBomb_1_1",
-            "x": 1955,
-            "y": 242
+            "x": 2848,
+            "y": 685
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -251,8 +209,8 @@
             "label": "sampoShooter",
             "bulletEnable": false,
             "travelDistance": 100,
-            "x": 563,
-            "y": 659
+            "x": 1476,
+            "y": 687
         },
         {
             "prefabId": "7013c41a-a194-4bae-aca0-15e7eb0f552b",
@@ -262,8 +220,8 @@
                 "y"
             ],
             "label": "proxySpyke",
-            "x": 768,
-            "y": 204
+            "x": 1183,
+            "y": 651
         },
         {
             "prefabId": "7013c41a-a194-4bae-aca0-15e7eb0f552b",
@@ -273,8 +231,8 @@
                 "y"
             ],
             "label": "proxySpyke_1_1",
-            "x": 399,
-            "y": 621
+            "x": 1759,
+            "y": 653
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -284,8 +242,8 @@
                 "y"
             ],
             "label": "supaBomb_1_1_1",
-            "x": 1788,
-            "y": 726
+            "x": 2239,
+            "y": 688
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -319,8 +277,8 @@
                 "y"
             ],
             "label": "drone",
-            "x": 584,
-            "y": 217
+            "x": 963,
+            "y": 279
         },
         {
             "prefabId": "4e7d1116-2b35-48d0-9c9b-266277a60e96",
@@ -337,8 +295,8 @@
             "label": "activeZoneBoss",
             "isActive": true,
             "activateBoss": true,
-            "x": 2858,
-            "y": 541,
+            "x": 2826,
+            "y": 316,
             "scaleX": 9.656250296739685,
             "scaleY": 6.064623131946276,
             "alpha": 0
@@ -354,19 +312,8 @@
             "label": "guardBoss",
             "scope": "CLASS",
             "ThingToDrop": "Coin",
-            "x": 3059,
-            "y": 657
-        },
-        {
-            "type": "Image",
-            "id": "ed91eceb-f8e1-4918-b6c2-4f286823f62d",
-            "label": "alert_instance_10000_1_1_1_1_1_1",
-            "texture": {
-                "key": "misile",
-                "frame": "alert instance 10000"
-            },
-            "x": 3048,
-            "y": 552
+            "x": 3047,
+            "y": 432
         },
         {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
@@ -378,14 +325,90 @@
             "label": "drone_1",
             "x": 3063,
             "y": 55
+        },
+        {
+            "prefabId": "6afa43fe-4a45-41e6-9689-146c20a9cf1c",
+            "id": "a35b1b69-394b-466a-84b8-02896bf28cb1",
+            "unlock": [
+                "x",
+                "y",
+                "isCannonStrike"
+            ],
+            "label": "upgradeHalo",
+            "isCannonStrike": true,
+            "x": 1759,
+            "y": 463
+        },
+        {
+            "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
+            "id": "9612d445-37ed-4c03-91e8-8c6f7d959550",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "portalCannon",
+            "x": 420,
+            "y": 693
+        },
+        {
+            "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
+            "id": "e50a0a68-9bfc-400c-861a-17ab6acda11c",
+            "unlock": [
+                "x",
+                "y",
+                "angle"
+            ],
+            "label": "portalCannon_1",
+            "x": 420,
+            "y": 90,
+            "angle": -90
+        },
+        {
+            "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
+            "id": "917b0581-59d3-4f66-9d26-9fb2881f3a77",
+            "unlock": [
+                "x",
+                "y",
+                "angle",
+                "IsFirstCannon"
+            ],
+            "label": "portalCannon_2",
+            "IsFirstCannon": true,
+            "x": 3103,
+            "y": 693,
+            "angle": -90
         }
     ],
     "plainObjects": [
         {
-            "id": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
+            "id": "5c597127-acc1-4233-9547-90aec807b4f2",
             "type": "Tilemap",
             "label": "mapa",
             "key": "new_level6",
+            "tilesets": [
+                {
+                    "name": "late_woods_tiles",
+                    "imageKey": "late_woods_tiles"
+                }
+            ]
+        },
+        {
+            "id": "73cf159c-4a09-45b8-bcbc-ffac3b10c3c3",
+            "type": "Tilemap",
+            "label": "noCollide",
+            "key": "new_level6",
+            "tilesets": [
+                {
+                    "name": "late_woods_tiles",
+                    "imageKey": "late_woods_tiles"
+                }
+            ]
+        },
+        {
+            "id": "90eea0f0-495e-4f3f-b631-c19a37807132",
+            "type": "Tilemap",
+            "label": "nocollide2",
+            "key": "new_level16",
             "tilesets": [
                 {
                     "name": "new_ciudad_tiles",
@@ -394,14 +417,14 @@
             ]
         },
         {
-            "id": "67ecd760-fbda-4f59-bf35-c424dad395f6",
+            "id": "3343b77e-711b-4fb6-9cf7-783de022ad9c",
             "type": "Tilemap",
-            "label": "new_level6",
+            "label": "UpperTile",
             "key": "new_level6",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "late_woods_tiles",
+                    "imageKey": "late_woods_tiles"
                 }
             ]
         }
@@ -415,13 +438,17 @@
     "lists": [
         {
             "id": "0e080d9c-0b39-4755-a5d5-57ae5501d356",
-            "label": "doors"
+            "label": "doors",
+            "objectIds": [
+                "f2b8fbd9-e680-4088-80a1-a9371cde11c6"
+            ]
         },
         {
             "id": "a5839e13-79a6-473b-b910-924096033370",
             "label": "switches",
             "objectIds": [
-                "9a1b8a13-4e2f-4e74-9b76-aacfaf3b136f"
+                "9a1b8a13-4e2f-4e74-9b76-aacfaf3b136f",
+                "1a97de4b-7ca3-4114-9e5d-2f40274d8848"
             ]
         },
         {

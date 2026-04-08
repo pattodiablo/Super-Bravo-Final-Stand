@@ -870,6 +870,11 @@
                 "key": "InvisibleTile"
             },
             {
+                "url": "assets/environment/late_woods_tiles.png",
+                "type": "image",
+                "key": "late_woods_tiles"
+            },
+            {
                 "url": "assets/images/lifeBar.png",
                 "type": "image",
                 "key": "lifeBar"
@@ -1043,6 +1048,11 @@
                 "url": "assets/images/newBg2.png",
                 "type": "image",
                 "key": "newBg2"
+            },
+            {
+                "url": "assets/images/newBg3.png",
+                "type": "image",
+                "key": "newBg3"
             },
             {
                 "url": "assets/newPropsAnimations.json",
