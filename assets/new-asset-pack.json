@@ -294,6 +294,11 @@
                 "key": "CyberPigeonAnimation"
             },
             {
+                "url": "assets/environment/dark_city_tiles.png",
+                "type": "image",
+                "key": "dark_city_tiles"
+            },
+            {
                 "url": [
                     "assets/scenes/prefabs/DeditoButton.js"
                 ],

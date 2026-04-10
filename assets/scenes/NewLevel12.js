@@ -24,73 +24,65 @@ class NewLevel12 extends BaseScene {
 
 		// mapa
 		const mapa = this.add.tilemap("new_level12");
-		mapa.addTilesetImage("new_ciudad_tiles", "new_ciudad_tiles");
+		mapa.addTilesetImage("dark_city_tiles", "dark_city_tiles");
 
 		// new_level12
 		const new_level12 = this.add.tilemap("new_level12");
-		new_level12.addTilesetImage("new_ciudad_tiles", "new_ciudad_tiles");
+		new_level12.addTilesetImage("dark_city_tiles", "dark_city_tiles");
 
 		// bg1Tile
 		const bg1Tile = this.add.image(0, 0, "bg2Tile");
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg3TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 756.2792796524731, 64, 64, "newBg3");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide2", ["dark_city_tiles"], 0, 0);
 
 		// nocollide
 		mapa.createLayer("nocollide", [], 0, 0);
 
 		// layer
-		const layer = mapa.createLayer("layer", ["new_ciudad_tiles"], 0, 0);
+		const layer = mapa.createLayer("layer", ["dark_city_tiles"], 0, 0);
 
 		// player
-		const player = new Player(this, 132, 734);
+		const player = new Player(this, 164, 617);
 		this.add.existing(player);
 
 		// upperTile_1
 		new_level12.createLayer("upperTile", [], 0, 0);
 
 		// alert_instance_10000
-		this.add.image(907, 736, "misile", "alert instance 10000");
+		this.add.image(805, 638, "misile", "alert instance 10000");
 
 		// supaBomb
-		const supaBomb = new SupaBomb(this, 497, 757);
+		const supaBomb = new SupaBomb(this, 418, 614);
 		this.add.existing(supaBomb);
 
 		// supaBomb_1
-		const supaBomb_1 = new SupaBomb(this, 846, 699);
+		const supaBomb_1 = new SupaBomb(this, 1146, 607);
 		this.add.existing(supaBomb_1);
 
 		// sampoShooter
 		const sampoShooter = new SampoShooter(this, 1139, 761);
 		this.add.existing(sampoShooter);
 
-		// enemyCreator
-		const enemyCreator = new EnemyCreator(this, 1280, 658);
-		this.add.existing(enemyCreator);
-
-		// enemyCreator_1
-		const enemyCreator_1 = new EnemyCreator(this, 1324, 410);
-		this.add.existing(enemyCreator_1);
-
 		// sampoShooter_1
-		const sampoShooter_1 = new SampoShooter(this, 1102, 540);
+		const sampoShooter_1 = new SampoShooter(this, 1195, 438);
 		this.add.existing(sampoShooter_1);
 
 		// drone
-		const drone = new Drone(this, 278, 218);
+		const drone = new Drone(this, 396, 87);
 		this.add.existing(drone);
 
 		// misile
-		const misile = new Misile(this, 1688, 92);
+		const misile = new Misile(this, 1659, 639);
 		this.add.existing(misile);
 
 		// proxySpyke
-		const proxySpyke = new ProxySpyke(this, 849, 206);
+		const proxySpyke = new ProxySpyke(this, 1374, 526);
 		this.add.existing(proxySpyke);
 
 		// sampoShooter_2
@@ -98,36 +90,24 @@ class NewLevel12 extends BaseScene {
 		this.add.existing(sampoShooter_2);
 
 		// enemyCreator_2
-		const enemyCreator_2 = new EnemyCreator(this, 1243, 38);
+		const enemyCreator_2 = new EnemyCreator(this, 796, 14);
 		this.add.existing(enemyCreator_2);
 
 		// card
-		const card = new Card(this, 621, 254);
+		const card = new Card(this, 797, 86);
 		this.add.existing(card);
 
 		// sampoShooter_3
-		const sampoShooter_3 = new SampoShooter(this, 215, 499);
+		const sampoShooter_3 = new SampoShooter(this, 188, 192);
 		this.add.existing(sampoShooter_3);
 
-		// enemyCreator_3
-		const enemyCreator_3 = new EnemyCreator(this, 143, 210);
-		this.add.existing(enemyCreator_3);
-
 		// heart
-		const heart = new Heart(this, 745, 435);
+		const heart = new Heart(this, 807, 483);
 		this.add.existing(heart);
 
 		// card_1
-		const card_1 = new Card(this, 1569, 285);
+		const card_1 = new Card(this, 1475, 427);
 		this.add.existing(card_1);
-
-		// heart_1
-		const heart_1 = new Heart(this, 1057, 80);
-		this.add.existing(heart_1);
-
-		// heart_2
-		const heart_2 = new Heart(this, 453, 258);
-		this.add.existing(heart_2);
 
 		// lists
 		const doors = [];
@@ -136,7 +116,7 @@ class NewLevel12 extends BaseScene {
 		const platforms = [];
 		const coins = [];
 		const catapultas = [];
-		const revivingPods = [enemyCreator, enemyCreator_2, enemyCreator_3];
+		const revivingPods = [enemyCreator_2];
 		const tutorials = [];
 
 		// tilespriteBG (components)
@@ -149,16 +129,13 @@ class NewLevel12 extends BaseScene {
 		enemyCreator_2.PodID = "pod2";
 
 		// card (prefab fields)
-		card.timeExpires = 10000;
+		card.timeExpires = 4000;
 
 		// sampoShooter_3 (prefab fields)
 		sampoShooter_3.RevivingPodID = "pod3";
 
-		// enemyCreator_3 (prefab fields)
-		enemyCreator_3.PodID = "pod3\n";
-
 		// card_1 (prefab fields)
-		card_1.timeExpires = 6000;
+		card_1.timeExpires = 15000;
 
 		this.bg1Tile = bg1Tile;
 		this.tilespriteBG = tilespriteBG;
@@ -174,7 +151,7 @@ class NewLevel12 extends BaseScene {
 		this.catapultas = catapultas;
 		this.revivingPods = revivingPods;
 		this.tutorials = tutorials;
-		this.nextLevel = "NewLevel13";
+
 		this.events.emit("scene-awake");
 	}
 

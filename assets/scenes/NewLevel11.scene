@@ -27,7 +27,7 @@
         },
         {
             "type": "TileSprite",
-            "id": "5aeb4fc4-41a7-4688-9c84-c58db237712a",
+            "id": "3ad4c2b6-2b4d-4c69-abc7-59689de678ec",
             "label": "tilespriteBG",
             "scope": "CLASS",
             "components": [
@@ -48,7 +48,7 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide2",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -58,7 +58,7 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -69,7 +69,7 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "layer",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -91,7 +91,7 @@
             "tilemapId": "67ecd760-fbda-4f59-bf35-c424dad395f6",
             "layerName": "upperTile",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -99,24 +99,13 @@
             "id": "d8cc54d2-f027-456f-abca-fef243977dbe",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "timeExpires"
             ],
             "label": "card",
-            "x": 1441,
-            "y": 88
-        },
-        {
-            "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
-            "id": "5ceb53aa-f4c6-425d-a74d-d4eeab38b1f5",
-            "unlock": [
-                "x",
-                "y",
-                "power"
-            ],
-            "label": "catapulta",
-            "power": 600,
-            "x": 617,
-            "y": 496
+            "timeExpires": 8000,
+            "x": 1258,
+            "y": 82
         },
         {
             "prefabId": "132851fc-10a4-452c-a832-422ff1f6d7b1",
@@ -128,8 +117,8 @@
                 "scaleY"
             ],
             "label": "sideDoorLocked",
-            "x": 544,
-            "y": 465,
+            "x": 690,
+            "y": 370,
             "scaleX": 0.5674976596138621,
             "scaleY": 0.5674976596138621
         },
@@ -143,8 +132,8 @@
             ],
             "label": "toll",
             "tollCost": 20,
-            "x": 159,
-            "y": 496
+            "x": 318,
+            "y": 404
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -154,8 +143,8 @@
                 "y"
             ],
             "label": "heart",
-            "x": 66,
-            "y": 229
+            "x": 85,
+            "y": 376
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -165,8 +154,8 @@
                 "y"
             ],
             "label": "heart_1",
-            "x": 1040,
-            "y": 596
+            "x": 1511,
+            "y": 312
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -187,8 +176,8 @@
                 "y"
             ],
             "label": "sampoShooter_1",
-            "x": 1274,
-            "y": 480
+            "x": 942,
+            "y": 356
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -198,8 +187,8 @@
                 "y"
             ],
             "label": "sampoShooter_2",
-            "x": 804,
-            "y": 96
+            "x": 573,
+            "y": 335
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -209,8 +198,8 @@
                 "y"
             ],
             "label": "supaBomb",
-            "x": 1067,
-            "y": 452
+            "x": 951,
+            "y": 660
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -220,8 +209,8 @@
                 "y"
             ],
             "label": "supaBomb_1",
-            "x": 839,
-            "y": 322
+            "x": 672,
+            "y": 669
         },
         {
             "prefabId": "0f8a81a2-5a4b-4383-b9f0-cf2ce6a24410",
@@ -231,8 +220,8 @@
                 "y"
             ],
             "label": "angrySpin",
-            "x": 1167,
-            "y": 726
+            "x": 489,
+            "y": 700
         },
         {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
@@ -242,8 +231,8 @@
                 "y"
             ],
             "label": "drone",
-            "x": 1331,
-            "y": 564
+            "x": 1191,
+            "y": 603
         },
         {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
@@ -253,8 +242,8 @@
                 "y"
             ],
             "label": "drone_1",
-            "x": 1307,
-            "y": 184
+            "x": 1434,
+            "y": 216
         },
         {
             "prefabId": "dae0c595-f7aa-48e4-92ff-be93ff062d2a",
@@ -264,8 +253,8 @@
                 "y"
             ],
             "label": "blobber",
-            "x": 541,
-            "y": 561
+            "x": 150,
+            "y": 597
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -275,19 +264,8 @@
                 "y"
             ],
             "label": "supaBomb_2",
-            "x": 375,
-            "y": 118
-        },
-        {
-            "prefabId": "93b28f2d-f948-468c-a24f-7260b651587d",
-            "id": "7a72d2c8-6a9f-4212-a10e-a95b74c9a8cc",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "platform2",
-            "x": 1194,
-            "y": 222
+            "x": 315,
+            "y": 225
         },
         {
             "prefabId": "3305649f-477c-45f5-a110-8182010b02f0",
@@ -297,8 +275,8 @@
                 "y"
             ],
             "label": "enemyCreator",
-            "x": 888,
-            "y": 58
+            "x": 950,
+            "y": 188
         }
     ],
     "plainObjects": [
@@ -309,8 +287,8 @@
             "key": "new_level11",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "dark_city_tiles",
+                    "imageKey": "dark_city_tiles"
                 }
             ]
         },
@@ -321,8 +299,8 @@
             "key": "new_level11",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "dark_city_tiles",
+                    "imageKey": "dark_city_tiles"
                 }
             ]
         }
@@ -358,10 +336,7 @@
         },
         {
             "id": "162e2fe2-38a7-450b-88ec-186b241d78cc",
-            "label": "platforms",
-            "objectIds": [
-                "7a72d2c8-6a9f-4212-a10e-a95b74c9a8cc"
-            ]
+            "label": "platforms"
         },
         {
             "id": "9ebda1ea-a3d2-410b-b328-4358561cbdf7",

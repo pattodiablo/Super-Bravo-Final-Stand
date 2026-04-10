@@ -83,8 +83,11 @@ class GuardBoss extends Phaser.GameObjects.Sprite {
 			callbackScope: this,
 			loop: true
 		});
+		this.scene.musicBeforeBoss = this.scene.supajukebox.filter(song => song.isPlaying);
+		if (this.scene.musicBeforeBoss.length === 0 && this.scene.supajukebox.length > 0) {
+			this.scene.musicBeforeBoss = [this.scene.supajukebox[0]];
+		}
 	}
-
 	entryAnimation(){
 
 		this.isFalling=true;
@@ -199,9 +202,11 @@ class GuardBoss extends Phaser.GameObjects.Sprite {
 			}else{
 						this.body.enable=false;
 						// explotion
-						this.getDirectiontimer.remove();
+						if (this.getDirectiontimer) {
+							this.getDirectiontimer.remove();
+						}
 
-						if(typeof this.shootsDelay!==undefined){
+						if (this.shootsDelay) {
 							this.shootsDelay.remove();
 						}
 					
@@ -228,6 +233,22 @@ class GuardBoss extends Phaser.GameObjects.Sprite {
 							delay: 3500,                // ms
 							callback: function(){
 					
+
+								if (this.scene.superbravo_gameplay_finalboss2) {
+									this.scene.superbravo_gameplay_finalboss2.stop();
+								}
+
+								if (!this.scene.game.playerData.isMusicMuted && this.scene.musicBeforeBoss && this.scene.musicBeforeBoss.length > 0) {
+									this.scene.musicBeforeBoss.forEach(song => {
+										song.setMute(false);
+										song.setVolume(1);
+										if (!song.isPlaying) {
+											song.play();
+										}
+									});
+								}
+
+								this.scene.musicBeforeBoss = [];
 
 								switch(this.ThingToDrop){
 									case "Cart":
@@ -290,7 +311,9 @@ class GuardBoss extends Phaser.GameObjects.Sprite {
 
 
 						this.isDead = true;
-						this.decisionTimer.remove();
+						if (this.decisionTimer) {
+							this.decisionTimer.remove();
+						}
 			}
 
 

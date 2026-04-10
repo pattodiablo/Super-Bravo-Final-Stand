@@ -2,8 +2,8 @@
     "id": "aaf02c9c-2655-426c-9d11-d679c5b56ca8",
     "sceneType": "SCENE",
     "settings": {
-        "snapWidth": 32,
-        "snapHeight": 32,
+        "snapWidth": 74,
+        "snapHeight": 84,
         "superClassName": "BaseScene",
         "preloadPackFiles": [
             "Super-Bravo-Rune/assets/NewLevel13Pack.json"
@@ -19,7 +19,6 @@
             "id": "bd618ef4-f589-480a-9a9a-c6abdeb6f3b0",
             "label": "bg1Tile",
             "scope": "CLASS",
-            "components": [],
             "texture": {
                 "key": "bg1Tile"
             },
@@ -28,14 +27,14 @@
         },
         {
             "type": "TileSprite",
-            "id": "64af4b89-0cec-4f39-b2d9-5efd86f69384",
+            "id": "b1c70183-2401-4aa9-b68f-76223be3d5e7",
             "label": "tilespriteBG",
             "scope": "CLASS",
             "components": [
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "bg1TileBG"
+                "key": "newBg3"
             },
             "originX": 0,
             "originY": 1,
@@ -46,22 +45,20 @@
             "type": "TilemapLayer",
             "id": "313d3c67-0555-4fe7-b4f9-9a9c76d4305c",
             "label": "nocollide2_1",
-            "components": [],
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide2",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
             "type": "TilemapLayer",
             "id": "ba45af92-dd29-4b67-bdf6-8c50bf71dcd1",
             "label": "nocollide",
-            "components": [],
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -69,11 +66,10 @@
             "id": "1e095778-25a2-436b-a00d-7c82f4d10f2b",
             "label": "layer",
             "scope": "CLASS",
-            "components": [],
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "layer",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -85,7 +81,6 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "components": [],
             "x": 70,
             "y": 442
         },
@@ -93,11 +88,10 @@
             "type": "TilemapLayer",
             "id": "d565e784-69a0-4233-845c-51bc1a6e4635",
             "label": "upperTile_1",
-            "components": [],
             "tilemapId": "67ecd760-fbda-4f59-bf35-c424dad395f6",
             "layerName": "upperTile",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -105,25 +99,13 @@
             "id": "e18e276e-7d20-44bb-b116-cec7126d89a8",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "timeExpires"
             ],
             "label": "card",
-            "components": [],
-            "x": 1509,
-            "y": 519
-        },
-        {
-            "type": "Image",
-            "id": "cd37b1ea-519c-49c9-bbb5-e51f1825e09a",
-            "label": "powerPodium",
-            "components": [],
-            "texture": {
-                "key": "PowerPodium"
-            },
-            "x": 1513,
-            "y": 112,
-            "scaleX": 0.8378636521685839,
-            "scaleY": 0.8378636521685839
+            "timeExpires": 12000,
+            "x": 1521,
+            "y": 253
         },
         {
             "prefabId": "6afa43fe-4a45-41e6-9689-146c20a9cf1c",
@@ -135,9 +117,8 @@
             ],
             "label": "upgradeHalo",
             "isCannonStrike": true,
-            "components": [],
-            "x": 1514,
-            "y": 124
+            "x": 1450,
+            "y": 161
         },
         {
             "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
@@ -150,9 +131,8 @@
             ],
             "label": "portalCannon",
             "IsFirstCannon": true,
-            "components": [],
-            "x": 1276,
-            "y": 29,
+            "x": 1197,
+            "y": 72,
             "angle": -90
         },
         {
@@ -164,52 +144,20 @@
                 "angle"
             ],
             "label": "portalCannon_1",
-            "components": [],
-            "x": 230,
-            "y": 28,
+            "x": 93,
+            "y": 64,
             "angle": -180
-        },
-        {
-            "prefabId": "990c1d28-45db-4edc-a374-8720ae900806",
-            "id": "8c8873eb-2cb9-4a3a-90b6-4fc91e8b6283",
-            "unlock": [
-                "x",
-                "y",
-                "timeExpires"
-            ],
-            "label": "card_1",
-            "timeExpires": 10000,
-            "components": [],
-            "x": 237,
-            "y": 232
-        },
-        {
-            "prefabId": "93b28f2d-f948-468c-a24f-7260b651587d",
-            "id": "caa8745a-ec6c-4c17-aceb-1c624b3dec0d",
-            "unlock": [
-                "x",
-                "y",
-                "distance",
-                "timeTravel"
-            ],
-            "label": "platform2",
-            "distance": 150,
-            "timeTravel": 3000,
-            "components": [],
-            "x": 805,
-            "y": 431
         },
         {
             "type": "Image",
             "id": "d9a87f0e-b2ab-42aa-8f9d-af74efa88777",
             "label": "alert_instance_10000",
-            "components": [],
             "texture": {
                 "key": "misile",
                 "frame": "alert instance 10000"
             },
-            "x": 89,
-            "y": 486
+            "x": 741,
+            "y": 384
         },
         {
             "prefabId": "7338f23b-1401-4bb6-a52f-153e164c65bc",
@@ -221,10 +169,8 @@
             ],
             "label": "cyberPigeon",
             "distance": 150,
-            "components": [],
-            "x": 1153,
-            "y": 155,
-            "nestedPrefabs": []
+            "x": 1320,
+            "y": 70
         },
         {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
@@ -234,9 +180,8 @@
                 "y"
             ],
             "label": "drone",
-            "components": [],
-            "x": 856,
-            "y": 279
+            "x": 1075,
+            "y": 508
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -246,9 +191,8 @@
                 "y"
             ],
             "label": "heart",
-            "components": [],
-            "x": 803,
-            "y": 383
+            "x": 1351,
+            "y": 611
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -258,9 +202,8 @@
                 "y"
             ],
             "label": "heart_1",
-            "components": [],
-            "x": 800,
-            "y": 102
+            "x": 413,
+            "y": 296
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -270,21 +213,8 @@
                 "y"
             ],
             "label": "supaBomb",
-            "components": [],
-            "x": 375,
-            "y": 200
-        },
-        {
-            "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
-            "id": "cde0df2c-89cb-4e12-b0a8-f6362dd8a827",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "supaBomb_1",
-            "components": [],
-            "x": 1264,
-            "y": 716
+            "x": 415,
+            "y": 184
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -294,9 +224,58 @@
                 "y"
             ],
             "label": "supaBomb_2",
-            "components": [],
-            "x": 338,
-            "y": 711
+            "x": 398,
+            "y": 661
+        },
+        {
+            "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
+            "id": "cbdd753f-6c08-474d-b593-8a263a87a52c",
+            "unlock": [
+                "x",
+                "y",
+                "angle"
+            ],
+            "label": "portalCannon_2",
+            "x": 93,
+            "y": 692,
+            "angle": 90
+        },
+        {
+            "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
+            "id": "c40049cc-4752-49bf-a239-975fbe4c98fe",
+            "unlock": [
+                "x",
+                "y",
+                "angle"
+            ],
+            "label": "portalCannon_4",
+            "x": 736,
+            "y": 692,
+            "angle": 0
+        },
+        {
+            "prefabId": "c5a4c8f6-a934-468d-9cd1-5b3c0d4501f8",
+            "id": "39caa703-f044-498e-b9a8-2f4229493c0c",
+            "unlock": [
+                "x",
+                "y",
+                "angle"
+            ],
+            "label": "portalCannon_5",
+            "x": 736,
+            "y": 153,
+            "angle": -34
+        },
+        {
+            "prefabId": "5aa80ba6-889a-4b80-81df-0d5f4ba5de86",
+            "id": "0f5ec66b-f61a-482e-8a50-c4d80e919159",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "misile",
+            "x": 1757,
+            "y": 365
         }
     ],
     "plainObjects": [
@@ -307,8 +286,8 @@
             "key": "new_level13",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "dark_city_tiles",
+                    "imageKey": "dark_city_tiles"
                 }
             ]
         },
@@ -319,17 +298,17 @@
             "key": "new_level13",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "dark_city_tiles",
+                    "imageKey": "dark_city_tiles"
                 }
             ]
         }
     ],
     "meta": {
-        "app": "Phaser Editor 2D - Scene Editor",
-        "url": "https://phasereditor2d.com",
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "lists": [
         {
@@ -352,10 +331,7 @@
         },
         {
             "id": "162e2fe2-38a7-450b-88ec-186b241d78cc",
-            "label": "platforms",
-            "objectIds": [
-                "caa8745a-ec6c-4c17-aceb-1c624b3dec0d"
-            ]
+            "label": "platforms"
         },
         {
             "id": "9ebda1ea-a3d2-410b-b328-4358561cbdf7",

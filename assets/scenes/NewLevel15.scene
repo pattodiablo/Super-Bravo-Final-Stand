@@ -27,14 +27,14 @@
         },
         {
             "type": "TileSprite",
-            "id": "64af4b89-0cec-4f39-b2d9-5efd86f69384",
+            "id": "a01c78e1-4330-4440-af75-5c59372e29b6",
             "label": "tilespriteBG",
             "scope": "CLASS",
             "components": [
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "bg1TileBG"
+                "key": "newBg3"
             },
             "originX": 0,
             "originY": 1,
@@ -48,7 +48,7 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide2",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -58,7 +58,7 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -69,7 +69,7 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "layer",
             "tilesets": [
-                "new_ciudad_tiles"
+                "dark_city_tiles"
             ]
         },
         {
@@ -81,18 +81,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 133,
-            "y": 448
-        },
-        {
-            "type": "TilemapLayer",
-            "id": "d565e784-69a0-4233-845c-51bc1a6e4635",
-            "label": "upperTile_1",
-            "tilemapId": "67ecd760-fbda-4f59-bf35-c424dad395f6",
-            "layerName": "upperTile",
-            "tilesets": [
-                "new_ciudad_tiles"
-            ]
+            "x": 137,
+            "y": 632
         },
         {
             "prefabId": "990c1d28-45db-4edc-a374-8720ae900806",
@@ -104,8 +94,8 @@
             ],
             "label": "card",
             "timeExpires": 10000,
-            "x": 831,
-            "y": 383
+            "x": 898,
+            "y": 284
         },
         {
             "prefabId": "5aa80ba6-889a-4b80-81df-0d5f4ba5de86",
@@ -137,8 +127,8 @@
                 "y"
             ],
             "label": "supaBomb",
-            "x": 388,
-            "y": 323
+            "x": 247,
+            "y": 237
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -148,8 +138,8 @@
                 "y"
             ],
             "label": "supaBomb_1",
-            "x": 662,
-            "y": 161
+            "x": 494,
+            "y": 134
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -159,8 +149,8 @@
                 "y"
             ],
             "label": "supaBomb_2",
-            "x": 979,
-            "y": 426
+            "x": 903,
+            "y": 440
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -170,8 +160,8 @@
                 "y"
             ],
             "label": "supaBomb_3",
-            "x": 1273,
-            "y": 301
+            "x": 1286,
+            "y": 129
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -181,8 +171,8 @@
                 "y"
             ],
             "label": "heart",
-            "x": 396,
-            "y": 154
+            "x": 895,
+            "y": 108
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -192,19 +182,75 @@
                 "y"
             ],
             "label": "heart_1",
-            "x": 1381,
-            "y": 19
+            "x": 1383,
+            "y": 457
         },
         {
-            "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
-            "id": "650b3942-ae95-40d1-bf0d-11b39309f819",
+            "type": "TilemapLayer",
+            "id": "d565e784-69a0-4233-845c-51bc1a6e4635",
+            "label": "upperTile_1",
+            "tilemapId": "67ecd760-fbda-4f59-bf35-c424dad395f6",
+            "layerName": "upperTile",
+            "tilesets": [
+                "dark_city_tiles"
+            ]
+        },
+        {
+            "prefabId": "c812057b-6b17-4fd2-9f6d-b8c03b50c9dc",
+            "id": "9d678386-5559-44bb-8637-63082357fc6b",
+            "unlock": [
+                "x",
+                "y",
+                "ThingToDrop"
+            ],
+            "label": "guardBoss",
+            "scope": "CLASS",
+            "ThingToDrop": "Coin",
+            "x": 921,
+            "y": 514
+        },
+        {
+            "prefabId": "4e7d1116-2b35-48d0-9c9b-266277a60e96",
+            "id": "ca80a529-7146-448d-bdf7-a3de0a96b0de",
+            "unlock": [
+                "x",
+                "y",
+                "scaleX",
+                "scaleY",
+                "isActive",
+                "alpha",
+                "activateBoss"
+            ],
+            "label": "activeZoneBoss",
+            "isActive": true,
+            "activateBoss": true,
+            "x": 791,
+            "y": 507,
+            "scaleX": 5.914072889592503,
+            "scaleY": 5.070510206408815,
+            "alpha": 0
+        },
+        {
+            "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
+            "id": "841b4645-ed5c-4678-9634-62273c9eb924",
             "unlock": [
                 "x",
                 "y"
             ],
-            "label": "heart_2",
-            "x": 828,
-            "y": 614
+            "label": "drone",
+            "x": 1452,
+            "y": 601
+        },
+        {
+            "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
+            "id": "c7148805-8c61-42d9-af7f-47956e4ca95c",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "catapulta",
+            "x": 1536,
+            "y": 658
         }
     ],
     "plainObjects": [
@@ -215,8 +261,8 @@
             "key": "new_level15",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "dark_city_tiles",
+                    "imageKey": "dark_city_tiles"
                 }
             ]
         },
@@ -227,8 +273,8 @@
             "key": "new_level15",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "dark_city_tiles",
+                    "imageKey": "dark_city_tiles"
                 }
             ]
         }
@@ -253,7 +299,10 @@
         },
         {
             "id": "5b8b5385-7170-4f04-8368-32349b8524e7",
-            "label": "enemies"
+            "label": "enemies",
+            "objectIds": [
+                "9d678386-5559-44bb-8637-63082357fc6b"
+            ]
         },
         {
             "id": "162e2fe2-38a7-450b-88ec-186b241d78cc",

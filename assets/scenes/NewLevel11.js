@@ -24,11 +24,11 @@ class NewLevel11 extends BaseScene {
 
 		// mapa
 		const mapa = this.add.tilemap("new_level11");
-		mapa.addTilesetImage("new_ciudad_tiles", "new_ciudad_tiles");
+		mapa.addTilesetImage("dark_city_tiles", "dark_city_tiles");
 
 		// new_level11
 		const new_level11 = this.add.tilemap("new_level11");
-		new_level11.addTilesetImage("new_ciudad_tiles", "new_ciudad_tiles");
+		new_level11.addTilesetImage("dark_city_tiles", "dark_city_tiles");
 
 		// bg1Tile
 		const bg1Tile = this.add.image(0, 0, "bg2Tile");
@@ -39,13 +39,13 @@ class NewLevel11 extends BaseScene {
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", [], 0, 0);
+		mapa.createLayer("nocollide2", ["dark_city_tiles"], 0, 0);
 
 		// nocollide
-		mapa.createLayer("nocollide", [], 0, 0);
+		mapa.createLayer("nocollide", ["dark_city_tiles"], 0, 0);
 
 		// layer
-		const layer = mapa.createLayer("layer", [], 0, 0);
+		const layer = mapa.createLayer("layer", ["dark_city_tiles"], 0, 0);
 
 		// player
 		const player = new Player(this, 118, 747);
@@ -55,29 +55,25 @@ class NewLevel11 extends BaseScene {
 		new_level11.createLayer("upperTile", [], 0, 0);
 
 		// card
-		const card = new Card(this, 1441, 88);
+		const card = new Card(this, 1258, 82);
 		this.add.existing(card);
 
-		// catapulta
-		const catapulta = new Catapulta(this, 617, 496);
-		this.add.existing(catapulta);
-
 		// sideDoorLocked
-		const sideDoorLocked = new SideDoorLocked(this, 544, 465);
+		const sideDoorLocked = new SideDoorLocked(this, 690, 370);
 		this.add.existing(sideDoorLocked);
 		sideDoorLocked.scaleX = 0.5674976596138621;
 		sideDoorLocked.scaleY = 0.5674976596138621;
 
 		// toll
-		const toll = new Toll(this, 159, 496);
+		const toll = new Toll(this, 318, 404);
 		this.add.existing(toll);
 
 		// heart
-		const heart = new Heart(this, 66, 229);
+		const heart = new Heart(this, 85, 376);
 		this.add.existing(heart);
 
 		// heart_1
-		const heart_1 = new Heart(this, 1040, 596);
+		const heart_1 = new Heart(this, 1511, 312);
 		this.add.existing(heart_1);
 
 		// sampoShooter
@@ -85,54 +81,50 @@ class NewLevel11 extends BaseScene {
 		this.add.existing(sampoShooter);
 
 		// sampoShooter_1
-		const sampoShooter_1 = new SampoShooter(this, 1274, 480);
+		const sampoShooter_1 = new SampoShooter(this, 942, 356);
 		this.add.existing(sampoShooter_1);
 
 		// sampoShooter_2
-		const sampoShooter_2 = new SampoShooter(this, 804, 96);
+		const sampoShooter_2 = new SampoShooter(this, 573, 335);
 		this.add.existing(sampoShooter_2);
 
 		// supaBomb
-		const supaBomb = new SupaBomb(this, 1067, 452);
+		const supaBomb = new SupaBomb(this, 951, 660);
 		this.add.existing(supaBomb);
 
 		// supaBomb_1
-		const supaBomb_1 = new SupaBomb(this, 839, 322);
+		const supaBomb_1 = new SupaBomb(this, 672, 669);
 		this.add.existing(supaBomb_1);
 
 		// angrySpin
-		const angrySpin = new AngrySpin(this, 1167, 726);
+		const angrySpin = new AngrySpin(this, 489, 700);
 		this.add.existing(angrySpin);
 
 		// drone
-		const drone = new Drone(this, 1331, 564);
+		const drone = new Drone(this, 1191, 603);
 		this.add.existing(drone);
 
 		// drone_1
-		const drone_1 = new Drone(this, 1307, 184);
+		const drone_1 = new Drone(this, 1434, 216);
 		this.add.existing(drone_1);
 
 		// blobber
-		const blobber = new Blobber(this, 541, 561);
+		const blobber = new Blobber(this, 150, 597);
 		this.add.existing(blobber);
 
 		// supaBomb_2
-		const supaBomb_2 = new SupaBomb(this, 375, 118);
+		const supaBomb_2 = new SupaBomb(this, 315, 225);
 		this.add.existing(supaBomb_2);
 
-		// platform2
-		const platform2 = new Platform2(this, 1194, 222);
-		this.add.existing(platform2);
-
 		// enemyCreator
-		const enemyCreator = new EnemyCreator(this, 888, 58);
+		const enemyCreator = new EnemyCreator(this, 950, 188);
 		this.add.existing(enemyCreator);
 
 		// lists
 		const doors = [];
 		const switches = [];
 		const enemies = [sampoShooter, sampoShooter_1, sampoShooter_2, angrySpin, blobber];
-		const platforms = [platform2];
+		const platforms = [];
 		const coins = [];
 		const catapultas = [];
 		const revivingPods = [enemyCreator];
@@ -141,8 +133,8 @@ class NewLevel11 extends BaseScene {
 		// tilespriteBG (components)
 		new FixedToCamera(tilespriteBG);
 
-		// catapulta (prefab fields)
-		catapulta.power = 600;
+		// card (prefab fields)
+		card.timeExpires = 8000;
 
 		// toll (prefab fields)
 		toll.tollCost = 20;
@@ -183,7 +175,7 @@ class NewLevel11 extends BaseScene {
 	switches;
 	/** @type {Array<SampoShooter|AngrySpin|Blobber>} */
 	enemies;
-	/** @type {Platform2[]} */
+	/** @type {Array<any>} */
 	platforms;
 	/** @type {Array<any>} */
 	coins;

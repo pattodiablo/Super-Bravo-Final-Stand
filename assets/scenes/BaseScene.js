@@ -961,7 +961,7 @@ class BaseScene extends Phaser.Scene {
 			y: this.cameras.main.centerY-100,
 			alpha:0,
 			duration: 400,
-			delay: 500,
+			delay: 1000,
 			ease: 'Bounce.easeIn',
 			repeat: 0,
 			callbackScope: this,
