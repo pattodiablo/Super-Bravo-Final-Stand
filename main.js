@@ -22,9 +22,9 @@ function getOS() {
 		os = null;
 
 	if (macosPlatforms.indexOf(platform) !== -1) {
-		renderer = "Phaser.CANVAS";
+		renderer = "Phaser.AUTO";
 	} else if (iosPlatforms.indexOf(platform) !== -1) {
-		renderer = "Phaser.CANVAS";
+		renderer = "Phaser.AUTO";
 	} else if (windowsPlatforms.indexOf(platform) !== -1) {
 		renderer = "Phaser.WEBGL";
 	} else if (/Android/.test(userAgent)) {

@@ -875,6 +875,11 @@
                 "key": "InvisibleTile"
             },
             {
+                "url": "assets/environment/lab_building_tiles.png",
+                "type": "image",
+                "key": "lab_building_tiles"
+            },
+            {
                 "url": "assets/environment/late_woods_tiles.png",
                 "type": "image",
                 "key": "late_woods_tiles"
@@ -1058,6 +1063,11 @@
                 "url": "assets/images/newBg3.png",
                 "type": "image",
                 "key": "newBg3"
+            },
+            {
+                "url": "assets/images/newBg4.png",
+                "type": "image",
+                "key": "newBg4"
             },
             {
                 "url": "assets/newPropsAnimations.json",

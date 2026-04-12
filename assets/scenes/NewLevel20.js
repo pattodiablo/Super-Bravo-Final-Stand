@@ -24,35 +24,35 @@ class NewLevel20 extends BaseScene {
 
 		// mapa
 		const mapa = this.add.tilemap("new_level20");
-		mapa.addTilesetImage("new_ciudad_tiles", "new_ciudad_tiles");
+		mapa.addTilesetImage("lab_building_tiles", "lab_building_tiles");
 
 		// new_level20
 		const new_level20 = this.add.tilemap("new_level20");
-		new_level20.addTilesetImage("new_ciudad_tiles", "new_ciudad_tiles");
+		new_level20.addTilesetImage("lab_building_tiles", "lab_building_tiles");
 
 		// bg1Tile
 		const bg1Tile = this.add.image(0, 0, "bg1Tile");
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "bg1TileBG");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg4");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
+		mapa.createLayer("nocollide2", [], 0, 0);
 
 		// nocollide
 		mapa.createLayer("nocollide", [], 0, 0);
 
 		// layer
-		const layer = mapa.createLayer("layer", ["new_ciudad_tiles"], 0, 0);
+		const layer = mapa.createLayer("layer", ["lab_building_tiles"], 0, 0);
 
 		// player
 		const player = new Player(this, 146, 523);
 		this.add.existing(player);
 
 		// upperTile_1
-		new_level20.createLayer("upperTile", ["new_ciudad_tiles"], 0, 0);
+		new_level20.createLayer("upperTile", ["lab_building_tiles"], 0, 0);
 
 		// lists
 		const doors = [];
@@ -81,7 +81,7 @@ class NewLevel20 extends BaseScene {
 		this.catapultas = catapultas;
 		this.revivingPods = revivingPods;
 		this.tutorials = tutorials;
-		this.nextLevel = "NewLevel1";
+
 		this.events.emit("scene-awake");
 	}
 

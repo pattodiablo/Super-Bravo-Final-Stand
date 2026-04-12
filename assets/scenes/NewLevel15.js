@@ -35,7 +35,7 @@ class NewLevel15 extends BaseScene {
 		bg1Tile.setOrigin(0, 0);
 
 		// tilespriteBG
-		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg3");
+		const tilespriteBG = this.add.tileSprite(0, 0, 64, 64, "newBg4");
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
@@ -52,7 +52,7 @@ class NewLevel15 extends BaseScene {
 		this.add.existing(player);
 
 		// card
-		const card = new Card(this, 898, 284);
+		const card = new Card(this, 897, 336);
 		this.add.existing(card);
 
 		// misile
@@ -109,6 +109,10 @@ class NewLevel15 extends BaseScene {
 		const catapulta = new Catapulta(this, 1536, 658);
 		this.add.existing(catapulta);
 
+		// card_1
+		const card_1 = new Card(this, 1541, 59);
+		this.add.existing(card_1);
+
 		// lists
 		const doors = [];
 		const switches = [];
@@ -131,6 +135,9 @@ class NewLevel15 extends BaseScene {
 		// activeZoneBoss (prefab fields)
 		activeZoneBoss.isActive = true;
 		activeZoneBoss.activateBoss = true;
+
+		// card_1 (prefab fields)
+		card_1.timeExpires = 10000;
 
 		this.bg1Tile = bg1Tile;
 		this.tilespriteBG = tilespriteBG;

@@ -34,7 +34,7 @@
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "newBg3"
+                "key": "newBg4"
             },
             "originX": 0,
             "originY": 1,
@@ -94,8 +94,8 @@
             ],
             "label": "card",
             "timeExpires": 10000,
-            "x": 898,
-            "y": 284
+            "x": 897,
+            "y": 336
         },
         {
             "prefabId": "5aa80ba6-889a-4b80-81df-0d5f4ba5de86",
@@ -251,6 +251,19 @@
             "label": "catapulta",
             "x": 1536,
             "y": 658
+        },
+        {
+            "prefabId": "990c1d28-45db-4edc-a374-8720ae900806",
+            "id": "a3b4f8ff-c518-43bb-bb1c-1caceeeb7701",
+            "unlock": [
+                "x",
+                "y",
+                "timeExpires"
+            ],
+            "label": "card_1",
+            "timeExpires": 10000,
+            "x": 1541,
+            "y": 59
         }
     ],
     "plainObjects": [

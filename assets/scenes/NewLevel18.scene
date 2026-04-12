@@ -27,14 +27,14 @@
         },
         {
             "type": "TileSprite",
-            "id": "64af4b89-0cec-4f39-b2d9-5efd86f69384",
+            "id": "49e2c17c-9c99-4e7f-99ed-0fc229bfb71b",
             "label": "tilespriteBG",
             "scope": "CLASS",
             "components": [
                 "FixedToCamera"
             ],
             "texture": {
-                "key": "bg2TileBG"
+                "key": "newBg4"
             },
             "originX": 0,
             "originY": 1,
@@ -48,7 +48,8 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide2",
             "tilesets": [
-                "new_ciudad_tiles"
+                "lab_building_tiles",
+                "dark_city_tiles"
             ]
         },
         {
@@ -58,7 +59,8 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "nocollide",
             "tilesets": [
-                "new_ciudad_tiles"
+                "lab_building_tiles",
+                "dark_city_tiles"
             ]
         },
         {
@@ -69,7 +71,8 @@
             "tilemapId": "ab6bd9aa-cd45-4bbc-9092-2c8c62331644",
             "layerName": "layer",
             "tilesets": [
-                "new_ciudad_tiles"
+                "lab_building_tiles",
+                "dark_city_tiles"
             ]
         },
         {
@@ -81,8 +84,8 @@
             ],
             "label": "player",
             "scope": "CLASS",
-            "x": 244,
-            "y": 679
+            "x": 130,
+            "y": 597
         },
         {
             "prefabId": "cbd440a8-d749-4f6a-9443-a8fb63b526b1",
@@ -95,7 +98,7 @@
             "label": "stomper",
             "retardo": 500,
             "x": 715,
-            "y": -26
+            "y": -60
         },
         {
             "prefabId": "cbd440a8-d749-4f6a-9443-a8fb63b526b1",
@@ -108,7 +111,7 @@
             "label": "stomper_1",
             "retardo": 2000,
             "x": 850,
-            "y": -26
+            "y": -60
         },
         {
             "prefabId": "cbd440a8-d749-4f6a-9443-a8fb63b526b1",
@@ -121,7 +124,7 @@
             "label": "stomper_2",
             "retardo": 3000,
             "x": 992,
-            "y": -26
+            "y": -60
         },
         {
             "type": "TilemapLayer",
@@ -131,30 +134,22 @@
             "tilemapId": "67ecd760-fbda-4f59-bf35-c424dad395f6",
             "layerName": "upperTile",
             "tilesets": [
-                "new_ciudad_tiles"
+                "lab_building_tiles",
+                "dark_city_tiles"
             ]
-        },
-        {
-            "prefabId": "1f3e869e-abd2-40e2-b889-1cd7f877a68c",
-            "id": "ec23a493-64e4-4ea8-9ee3-30bdb6ea7d86",
-            "unlock": [
-                "x",
-                "y"
-            ],
-            "label": "cart",
-            "x": 480,
-            "y": 705
         },
         {
             "prefabId": "990c1d28-45db-4edc-a374-8720ae900806",
             "id": "9cbe3551-8a85-4101-8858-59e9c4add072",
             "unlock": [
                 "x",
-                "y"
+                "y",
+                "timeExpires"
             ],
             "label": "card",
-            "x": 480,
-            "y": 639
+            "timeExpires": 6000,
+            "x": 258,
+            "y": 799
         },
         {
             "prefabId": "c812057b-6b17-4fd2-9f6d-b8c03b50c9dc",
@@ -167,8 +162,8 @@
             "label": "guardBoss",
             "scope": "CLASS",
             "ThingToDrop": "Heart",
-            "x": 1310,
-            "y": 465
+            "x": 1328,
+            "y": 545
         },
         {
             "prefabId": "4e7d1116-2b35-48d0-9c9b-266277a60e96",
@@ -185,8 +180,8 @@
             "label": "activeZoneBoss",
             "isActive": true,
             "activateBoss": true,
-            "x": 988,
-            "y": 311,
+            "x": 1102,
+            "y": 443,
             "scaleX": 3.5106386183856517,
             "scaleY": 6.246401802220836,
             "alpha": 0
@@ -201,8 +196,8 @@
             ],
             "label": "card_1",
             "timeExpires": 8000,
-            "x": 1523,
-            "y": 461
+            "x": 1471,
+            "y": 579
         },
         {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
@@ -212,8 +207,8 @@
                 "y"
             ],
             "label": "drone",
-            "x": 654,
-            "y": 282
+            "x": 1337,
+            "y": 56
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -223,8 +218,8 @@
                 "y"
             ],
             "label": "sampoShooter",
-            "x": 1373,
-            "y": 710
+            "x": 153,
+            "y": 337
         },
         {
             "prefabId": "90b200d8-00c8-4e64-841c-42791d7bc769",
@@ -234,8 +229,8 @@
                 "y"
             ],
             "label": "sampoShooter_1",
-            "x": 871,
-            "y": 700
+            "x": 927,
+            "y": 608
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -245,8 +240,8 @@
                 "y"
             ],
             "label": "heart",
-            "x": 237,
-            "y": 366
+            "x": 315,
+            "y": 312
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -256,8 +251,8 @@
                 "y"
             ],
             "label": "heart_1",
-            "x": 1513,
-            "y": 675
+            "x": 978,
+            "y": 765
         },
         {
             "prefabId": "3305649f-477c-45f5-a110-8182010b02f0",
@@ -267,8 +262,8 @@
                 "y"
             ],
             "label": "enemyCreator",
-            "x": 456,
-            "y": 91
+            "x": 516,
+            "y": 191
         },
         {
             "prefabId": "f2c2ba10-5d18-44d1-b4bb-30e1d2aac783",
@@ -278,8 +273,8 @@
                 "y"
             ],
             "label": "drone_1",
-            "x": 113,
-            "y": 277
+            "x": 217,
+            "y": 59
         },
         {
             "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
@@ -289,8 +284,8 @@
                 "y"
             ],
             "label": "supaBomb",
-            "x": 1211,
-            "y": 258
+            "x": 596,
+            "y": 598
         },
         {
             "prefabId": "aa13d1d9-151a-4d67-ae52-0678e8566746",
@@ -300,8 +295,8 @@
                 "y"
             ],
             "label": "spike",
-            "x": 461,
-            "y": 453
+            "x": 565,
+            "y": 485
         },
         {
             "prefabId": "dae0c595-f7aa-48e4-92ff-be93ff062d2a",
@@ -311,8 +306,8 @@
                 "y"
             ],
             "label": "blobber",
-            "x": 1246,
-            "y": 625
+            "x": 563,
+            "y": 751
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -322,8 +317,45 @@
                 "y"
             ],
             "label": "heart_2",
-            "x": 1208,
-            "y": 143
+            "x": 1326,
+            "y": 181
+        },
+        {
+            "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
+            "id": "723a5307-9f86-4f93-8fe0-f49f0712f537",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "supaBomb_1",
+            "x": 334,
+            "y": 810
+        },
+        {
+            "prefabId": "95e06b2d-8c76-4f67-93d3-bf8909bc6b10",
+            "id": "8e1eb6ee-d4a4-41e3-9e19-fa1b8ced9d00",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "supaBomb_2",
+            "x": 1219,
+            "y": 808
+        },
+        {
+            "prefabId": "3c2e0a0e-b56d-4b75-b43e-f2475de3560b",
+            "id": "2d612fe5-8224-4b5a-a045-c6c1007318bf",
+            "unlock": [
+                "x",
+                "y",
+                "isHorizontal",
+                "distance"
+            ],
+            "label": "platform1",
+            "distance": 400,
+            "isHorizontal": true,
+            "x": 1201,
+            "y": 335
         }
     ],
     "plainObjects": [
@@ -334,8 +366,11 @@
             "key": "new_level18",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "lab_building_tiles",
+                    "imageKey": "lab_building_tiles"
+                },
+                {
+                    "name": "dark_city_tiles"
                 }
             ]
         },
@@ -346,8 +381,11 @@
             "key": "new_level18",
             "tilesets": [
                 {
-                    "name": "new_ciudad_tiles",
-                    "imageKey": "new_ciudad_tiles"
+                    "name": "lab_building_tiles",
+                    "imageKey": "lab_building_tiles"
+                },
+                {
+                    "name": "dark_city_tiles"
                 }
             ]
         }
@@ -381,7 +419,10 @@
         },
         {
             "id": "162e2fe2-38a7-450b-88ec-186b241d78cc",
-            "label": "platforms"
+            "label": "platforms",
+            "objectIds": [
+                "2d612fe5-8224-4b5a-a045-c6c1007318bf"
+            ]
         },
         {
             "id": "9ebda1ea-a3d2-410b-b328-4358561cbdf7",
