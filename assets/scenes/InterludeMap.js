@@ -378,9 +378,11 @@ class InterludeMap extends Phaser.Scene {
 			if (index <= highestUnlockedIndex) {
 				btn.clearTint();
 				btn.setAlpha(1);
+				btn.setInteractive();
 			} else {
 				btn.setTint(INACTIVE_TINT);
 				btn.setAlpha(0.4);
+				btn.disableInteractive();
 			}
 		});
 

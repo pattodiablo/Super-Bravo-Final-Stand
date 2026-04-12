@@ -20,8 +20,12 @@ class MapBtn extends Phaser.GameObjects.Sprite {
 	/* START-USER-CODE */
 
 	create(){
+		if (this.pointerHandlerBound) {
+			return;
+		}
 
-		this.setInteractive().on('pointerdown', function(pointer, localX, localY, event){
+		this.pointerHandlerBound = true;
+		this.on('pointerdown', function(pointer, localX, localY, event){
 			const levelKey = this.LevelToGo;
 			const sceneManager = this.scene.scene.manager;
 			const isLoaded = sceneManager.scenes.some(s => s.scene.key === levelKey);
