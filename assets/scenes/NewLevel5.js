@@ -43,7 +43,7 @@ class NewLevel5 extends BaseScene {
 		tilespriteBG.setOrigin(0, 1);
 
 		// nocollide2_1
-		mapa.createLayer("nocollide2", [], 0, 0);
+		mapa.createLayer("nocollide2", ["new_ciudad_tiles"], 0, 0);
 
 		// nocollide
 		mapa.createLayer("nocollide", ["new_ciudad_tiles"], 0, 0);
@@ -105,28 +105,20 @@ class NewLevel5 extends BaseScene {
 		this.add.existing(angrySpin_1);
 
 		// drone_1
-		const drone_1 = new Drone(this, 135, 155);
+		const drone_1 = new Drone(this, 87, 154);
 		this.add.existing(drone_1);
 
 		// enemyCreator_1
 		const enemyCreator_1 = new EnemyCreator(this, 1047, 158);
 		this.add.existing(enemyCreator_1);
 
-		// catapulta
-		const catapulta = new Catapulta(this, 1211, 341);
-		this.add.existing(catapulta);
-
 		// heart
-		const heart = new Heart(this, 1408, 196);
+		const heart = new Heart(this, 1351, 171);
 		this.add.existing(heart);
 
 		// heart_1
 		const heart_1 = new Heart(this, 717, 166);
 		this.add.existing(heart_1);
-
-		// catapulta_1
-		const catapulta_1 = new Catapulta(this, 565, 341);
-		this.add.existing(catapulta_1);
 
 		// sideDoor
 		const sideDoor = new SideDoor(this, 281, 596);
@@ -155,12 +147,6 @@ class NewLevel5 extends BaseScene {
 
 		// enemyCreator_1 (prefab fields)
 		enemyCreator_1.PodID = "pod2";
-
-		// catapulta (prefab fields)
-		catapulta.power = 800;
-
-		// catapulta_1 (prefab fields)
-		catapulta_1.power = 800;
 
 		this.bg1Tile = bg1Tile;
 		this.tilespriteBG = tilespriteBG;

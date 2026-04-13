@@ -233,8 +233,8 @@
                 "y"
             ],
             "label": "drone_1",
-            "x": 135,
-            "y": 155
+            "x": 87,
+            "y": 154
         },
         {
             "prefabId": "3305649f-477c-45f5-a110-8182010b02f0",
@@ -250,19 +250,6 @@
             "y": 158
         },
         {
-            "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
-            "id": "3b6ff9b3-8101-4f4f-bdb1-7c9c27e68ba2",
-            "unlock": [
-                "x",
-                "y",
-                "power"
-            ],
-            "label": "catapulta",
-            "power": 800,
-            "x": 1211,
-            "y": 341
-        },
-        {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
             "id": "f36d3918-ad31-4fdb-a3b7-7d8cd5424633",
             "unlock": [
@@ -270,8 +257,8 @@
                 "y"
             ],
             "label": "heart",
-            "x": 1408,
-            "y": 196
+            "x": 1351,
+            "y": 171
         },
         {
             "prefabId": "e1306e17-6229-485c-81c5-fb8fe209c8da",
@@ -283,19 +270,6 @@
             "label": "heart_1",
             "x": 717,
             "y": 166
-        },
-        {
-            "prefabId": "b772f3cd-be85-4685-b964-8294fd3e3ab5",
-            "id": "e12a9b34-bd30-4c25-92de-8f006ab716bd",
-            "unlock": [
-                "x",
-                "y",
-                "power"
-            ],
-            "label": "catapulta_1",
-            "power": 800,
-            "x": 565,
-            "y": 341
         },
         {
             "prefabId": "8da9c9d9-f1a7-4a14-8de4-671c7938637c",

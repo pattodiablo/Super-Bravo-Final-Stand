@@ -69,7 +69,7 @@ class NewLevel2 extends BaseScene {
 		this.add.existing(sampoShooter_1);
 
 		// catapulta_1
-		const catapulta_1 = new Catapulta(this, 1072, 787);
+		const catapulta_1 = new Catapulta(this, 1062, 787);
 		this.add.existing(catapulta_1);
 
 		// enemyCreator
