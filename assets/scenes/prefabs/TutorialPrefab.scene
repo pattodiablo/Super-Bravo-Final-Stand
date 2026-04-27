@@ -1,0 +1,43 @@
+{
+    "id": "45fccdb1-5235-4adf-befd-cb8fbceaa2c5",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 320,
+        "borderHeight": 480
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "911e7488-5446-4f5b-bc63-40580d9a1350",
+            "label": "newTuto1",
+            "texture": {
+                "key": "newTuto1"
+            }
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "IsMovil",
+            "label": "IsMovil",
+            "tooltip": "",
+            "defValue": false,
+            "customDefinition": false,
+            "editorOnly": false,
+            "deprecated": false,
+            "type": {
+                "id": "boolean",
+                "isArray": false
+            }
+        }
+    ]
+}

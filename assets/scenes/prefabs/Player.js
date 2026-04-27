@@ -1955,7 +1955,7 @@ this.scene.game.playerData.life = this.playerLife;
 			alpha: 0.1,
 			scale: 0.1,	
 			scale: 1,
-			duration: 200,
+			duration: 120,
 			repeat: 0,
 		});
 
@@ -1963,7 +1963,7 @@ this.scene.game.playerData.life = this.playerLife;
 			targets: this,
 			alpha: 1,
 			scale: 1.2,
-			duration: 100,
+			duration: 70,
 			repeat: 0,
 		});
 
@@ -1971,14 +1971,14 @@ this.scene.game.playerData.life = this.playerLife;
 		timeline.add({
 			targets: this,
 			scale: 1,
-			duration: 100,
+			duration: 70,
 			repeat: 0,
 		})
 
 		timeline.add({
 			targets: this,
 			alpha: 0.5,
-			duration: 80,
+			duration: 50,
 			repeat: 4,
 			yoyo:true,
 			callbackScope: this,
@@ -1991,7 +1991,7 @@ this.scene.game.playerData.life = this.playerLife;
 		timeline.add({
 			targets: this,
 		
-			duration: 300,
+			duration: 180,
 			ease: 'Back',
 			repeat: 0,
 			callbackScope: this,
@@ -2023,7 +2023,7 @@ this.scene.game.playerData.life = this.playerLife;
 			targets: this,
 			alpha: 1,
 			y: this.originalY,
-			duration: 500,
+			duration: 250,
 			ease: 'Linear',
 			repeat: 0,
 			callbackScope: this,

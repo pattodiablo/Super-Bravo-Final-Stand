@@ -106,66 +106,6 @@
             ]
         },
         {
-            "type": "Image",
-            "id": "3e6ebf6f-a546-4487-a988-599acda4cf78",
-            "label": "tutiSupa1",
-            "texture": {
-                "key": "tutiSupa1"
-            },
-            "x": 149,
-            "y": 525,
-            "scaleX": 0.6785843968785922,
-            "scaleY": 0.6785843968785922
-        },
-        {
-            "type": "Image",
-            "id": "5e9ad498-dc86-42de-b28b-4aef361d3ad4",
-            "label": "tutiSupa2",
-            "texture": {
-                "key": "tutiSupa2"
-            },
-            "x": 362,
-            "y": 690,
-            "scaleX": 0.8140984868151646,
-            "scaleY": 0.8140984868151646
-        },
-        {
-            "type": "Image",
-            "id": "2710e242-4abf-4978-a97d-41ec3651b19a",
-            "label": "tutiSupa3",
-            "texture": {
-                "key": "tutiSupa3"
-            },
-            "x": 687,
-            "y": 587,
-            "scaleX": 0.9547577230087638,
-            "scaleY": 0.9547577230087638
-        },
-        {
-            "type": "Image",
-            "id": "7b80c6a1-3e8e-4c7a-9206-93dcaab8918e",
-            "label": "tutiSupa4",
-            "texture": {
-                "key": "tutiSupa4"
-            },
-            "x": 131,
-            "y": 216,
-            "scaleX": 0.7887524927664641,
-            "scaleY": 0.7887524927664641
-        },
-        {
-            "type": "Image",
-            "id": "f84bbd8f-3173-41f5-abc7-b190c07be370",
-            "label": "tutiSupa6",
-            "texture": {
-                "key": "tutiSupa6"
-            },
-            "x": 159,
-            "y": 641,
-            "scaleX": 0.7497574748225851,
-            "scaleY": 0.7497574748225851
-        },
-        {
             "prefabId": "1f5ce768-fa76-41bd-a1f4-a85fc1eb6292",
             "id": "fdc228c9-e794-407b-9ed4-69513b1ac1ec",
             "unlock": [
@@ -209,6 +149,87 @@
             "label": "lightBeam",
             "x": 930,
             "y": 640
+        },
+        {
+            "prefabId": "45fccdb1-5235-4adf-befd-cb8fbceaa2c5",
+            "id": "9fcd9898-4395-46c2-9541-12d1eba517a3",
+            "unlock": [
+                "x",
+                "y",
+                "texture"
+            ],
+            "label": "newTuto1",
+            "texture": {
+                "key": "newTuto2"
+            },
+            "x": 170,
+            "y": 543
+        },
+        {
+            "prefabId": "45fccdb1-5235-4adf-befd-cb8fbceaa2c5",
+            "id": "edb43755-8da8-4608-b762-48fc07a832f9",
+            "unlock": [
+                "x",
+                "y",
+                "texture"
+            ],
+            "label": "newTuto",
+            "texture": {
+                "key": "newTuto4"
+            },
+            "x": 427,
+            "y": 588
+        },
+        {
+            "prefabId": "45fccdb1-5235-4adf-befd-cb8fbceaa2c5",
+            "id": "f4e702f2-9bee-40c5-967c-730f214226b6",
+            "unlock": [
+                "x",
+                "y",
+                "texture"
+            ],
+            "label": "newTuto_1",
+            "texture": {
+                "key": "newTuto3"
+            },
+            "x": 649,
+            "y": 500
+        },
+        {
+            "prefabId": "45fccdb1-5235-4adf-befd-cb8fbceaa2c5",
+            "id": "6ba4eda4-5cb3-4a97-ab8f-d912ad6f36b3",
+            "unlock": [
+                "x",
+                "y",
+                "texture",
+                "scaleX",
+                "scaleY"
+            ],
+            "label": "newTuto_2",
+            "texture": {
+                "key": "newTuto5"
+            },
+            "x": 787,
+            "y": 547,
+            "scaleX": 0.6402950021699765,
+            "scaleY": 0.6402950021699765
+        },
+        {
+            "prefabId": "45fccdb1-5235-4adf-befd-cb8fbceaa2c5",
+            "id": "fc85d701-fd68-4750-81a4-e07860640e57",
+            "unlock": [
+                "x",
+                "y",
+                "texture",
+                "IsMovil"
+            ],
+            "label": "newTuto_3",
+            "IsMovil": true,
+            "texture": {
+                "key": "newTuto6"
+            },
+            "x": 890,
+            "y": 193
         }
     ],
     "plainObjects": [

@@ -1104,6 +1104,51 @@
                 "key": "newSupaAnimationsRune2Powers"
             },
             {
+                "url": "assets/images/newTuto1.png",
+                "type": "image",
+                "key": "newTuto1"
+            },
+            {
+                "url": "assets/images/newTuto1Movil.png",
+                "type": "image",
+                "key": "newTuto1Movil"
+            },
+            {
+                "url": "assets/images/newTuto2.png",
+                "type": "image",
+                "key": "newTuto2"
+            },
+            {
+                "url": "assets/images/newTuto2Movil.png",
+                "type": "image",
+                "key": "newTuto2Movil"
+            },
+            {
+                "url": "assets/images/newTuto3.png",
+                "type": "image",
+                "key": "newTuto3"
+            },
+            {
+                "url": "assets/images/newTuto3Movil.png",
+                "type": "image",
+                "key": "newTuto3Movil"
+            },
+            {
+                "url": "assets/images/newTuto4.png",
+                "type": "image",
+                "key": "newTuto4"
+            },
+            {
+                "url": "assets/images/newTuto5.png",
+                "type": "image",
+                "key": "newTuto5"
+            },
+            {
+                "url": "assets/images/newTuto6.png",
+                "type": "image",
+                "key": "newTuto6"
+            },
+            {
                 "url": "assets/images/NextBtn.png",
                 "type": "image",
                 "key": "NextBtn"
@@ -1718,36 +1763,6 @@
                 "key": "TriangleBtn"
             },
             {
-                "url": "assets/images/tutiSupa1.png",
-                "type": "image",
-                "key": "tutiSupa1"
-            },
-            {
-                "url": "assets/images/tutiSupa2.png",
-                "type": "image",
-                "key": "tutiSupa2"
-            },
-            {
-                "url": "assets/images/tutiSupa3.png",
-                "type": "image",
-                "key": "tutiSupa3"
-            },
-            {
-                "url": "assets/images/tutiSupa4.png",
-                "type": "image",
-                "key": "tutiSupa4"
-            },
-            {
-                "url": "assets/images/tutiSupa5.png",
-                "type": "image",
-                "key": "tutiSupa5"
-            },
-            {
-                "url": "assets/images/tutiSupa6.png",
-                "type": "image",
-                "key": "tutiSupa6"
-            },
-            {
                 "url": "assets/images/tutiSupa7.png",
                 "type": "image",
                 "key": "tutiSupa7"
@@ -1761,6 +1776,11 @@
                 "url": "tutorialAnimations.json",
                 "type": "animation",
                 "key": "tutorialAnimations"
+            },
+            {
+                "url": "assets/scenes/prefabs/TutorialPrefab.js",
+                "type": "script",
+                "key": "TutorialPrefab"
             },
             {
                 "atlasURL": "assets/atlas/tutorials.json",

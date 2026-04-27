@@ -57,36 +57,6 @@ class NewLevel1 extends BaseScene {
 		// upperTile
 		const upperTile = new_level1.createLayer("upperTile", [], 0, 0);
 
-		// tutiSupa1
-		const tutiSupa1 = this.add.image(149, 525, "tutiSupa1");
-		tutiSupa1.scaleX = 0.6785843968785922;
-		tutiSupa1.scaleY = 0.6785843968785922;
-		tutiSupa1.setAlpha(0.9);
-
-		// tutiSupa2
-		const tutiSupa2 = this.add.image(362, 690, "tutiSupa2");
-		tutiSupa2.scaleX = 0.8140984868151646;
-		tutiSupa2.scaleY = 0.8140984868151646;
-		tutiSupa2.setAlpha(0.9);
-
-		// tutiSupa3
-		const tutiSupa3 = this.add.image(687, 587, "tutiSupa3");
-		tutiSupa3.scaleX = 0.9547577230087638;
-		tutiSupa3.scaleY = 0.9547577230087638;
-		tutiSupa3.setAlpha(0.9);
-
-		// tutiSupa4
-		const tutiSupa4 = this.add.image(131, 216, "tutiSupa4");
-		tutiSupa4.scaleX = 0.7887524927664641;
-		tutiSupa4.scaleY = 0.7887524927664641;
-		tutiSupa4.setAlpha(0.9);
-
-		// tutiSupa6
-		const tutiSupa6 = this.add.image(159, 641, "tutiSupa6");
-		tutiSupa6.scaleX = 0.7497574748225851;
-		tutiSupa6.scaleY = 0.7497574748225851;
-		tutiSupa6.setAlpha(0.9);
-
 		// handPointer
 		const handPointer = new HandPointer(this, 84, 693);
 		this.add.existing(handPointer);
@@ -104,6 +74,28 @@ class NewLevel1 extends BaseScene {
 		const lightBeam = new LightBeam(this, 930, 640);
 		this.add.existing(lightBeam);
 
+		// newTuto1
+		const newTuto1 = new TutorialPrefab(this, 170, 543, "newTuto2");
+		this.add.existing(newTuto1);
+
+		// newTuto
+		const newTuto = new TutorialPrefab(this, 427, 588, "newTuto4");
+		this.add.existing(newTuto);
+
+		// newTuto_1
+		const newTuto_1 = new TutorialPrefab(this, 649, 500, "newTuto3");
+		this.add.existing(newTuto_1);
+
+		// newTuto_2
+		const newTuto_2 = new TutorialPrefab(this, 787, 547, "newTuto5");
+		this.add.existing(newTuto_2);
+		newTuto_2.scaleX = 0.6402950021699765;
+		newTuto_2.scaleY = 0.6402950021699765;
+
+		// newTuto_3
+		const newTuto_3 = new TutorialPrefab(this, 890, 193, "newTuto6");
+		this.add.existing(newTuto_3);
+
 		// lists
 		const doors = [];
 		const switches = [];
@@ -112,10 +104,13 @@ class NewLevel1 extends BaseScene {
 		const coins = [];
 		const catapultas = [];
 		const revivingPods = [];
-		const tutorials = [tutiSupa1, tutiSupa2, tutiSupa3, tutiSupa4, tutiSupa6];
+		const tutorials = [];
 
 		// tilespriteBG (components)
 		new FixedToCamera(tilespriteBG);
+
+		// newTuto_3 (prefab fields)
+		newTuto_3.IsMovil = true;
 
 		this.bg1Tile = bg1Tile;
 		this.tilespriteBG = tilespriteBG;

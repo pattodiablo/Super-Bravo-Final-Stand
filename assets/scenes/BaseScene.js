@@ -960,8 +960,8 @@ class BaseScene extends Phaser.Scene {
 			targets: this.readyText,
 			y: this.cameras.main.centerY-100,
 			alpha:0,
-			duration: 400,
-			delay: 1000,
+			duration: 300,
+			delay: 500,
 			ease: 'Bounce.easeIn',
 			repeat: 0,
 			callbackScope: this,
@@ -975,7 +975,7 @@ class BaseScene extends Phaser.Scene {
 		showReadyText.add({
 			targets: this.readyText,
 			alpha: 0,
-			duration: 200,
+			duration: 120,
 			repeat: 1,
 			loop: true,
 			yoyo:true,
@@ -988,8 +988,8 @@ class BaseScene extends Phaser.Scene {
 		showReadyText.add({
 			targets: this.readyText,
 			alpha: 0,
-			delay:500,
-			duration: 400,
+			delay:200,
+			duration: 250,
 			repeat: 0,
 			callbackScope: this,
 			onComplete: function () {
