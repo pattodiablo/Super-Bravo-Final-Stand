@@ -1,5 +1,141 @@
 var coins = 0;
 var isDebug =  false;
+
+var orientationMessages = {
+	en: {
+		title: "Rotate your device",
+		message: "This game only works in landscape mode. Please rotate your screen to continue."
+	},
+	es: {
+		title: "Gira tu dispositivo",
+		message: "Este juego solo funciona en modo horizontal. Por favor, rota la pantalla para continuar."
+	},
+	pt: {
+		title: "Gire o seu dispositivo",
+		message: "Este jogo só funciona no modo paisagem. Por favor, gire a tela para continuar."
+	},
+	fr: {
+		title: "Faites pivoter votre appareil",
+		message: "Ce jeu fonctionne uniquement en mode paysage. Veuillez faire pivoter votre écran pour continuer."
+	},
+	de: {
+		title: "Drehen Sie Ihr Gerät",
+		message: "Dieses Spiel funktioniert nur im Querformat. Bitte drehen Sie Ihren Bildschirm, um fortzufahren."
+	},
+	it: {
+		title: "Ruota il dispositivo",
+		message: "Questo gioco funziona solo in modalità orizzontale. Ruota lo schermo per continuare."
+	},
+	ja: {
+		title: "デバイスを回転してください",
+		message: "このゲームは横向きモードでのみプレイできます。画面を回転して続行してください。"
+	},
+	ko: {
+		title: "기기를 회전하세요",
+		message: "이 게임은 가로 모드에서만 실행됩니다. 화면을 회전한 후 계속하세요."
+	},
+	zh: {
+		title: "请旋转您的设备",
+		message: "本游戏仅支持横屏模式。请旋转屏幕后继续。"
+	},
+	ru: {
+		title: "Поверните устройство",
+		message: "Эта игра работает только в альбомной ориентации. Поверните экран, чтобы продолжить."
+	},
+	ar: {
+		title: "قم بتدوير جهازك",
+		message: "تعمل هذه اللعبة فقط في الوضع الأفقي. يرجى تدوير الشاشة للمتابعة."
+	},
+	nl: {
+		title: "Draai je apparaat",
+		message: "Dit spel werkt alleen in liggende modus. Draai je scherm om door te gaan."
+	},
+	pl: {
+		title: "Obróć urządzenie",
+		message: "Ta gra działa tylko w trybie poziomym. Obróć ekran, aby kontynuować."
+	},
+	tr: {
+		title: "Cihazınızı çevirin",
+		message: "Bu oyun yalnızca yatay modda çalışır. Devam etmek için ekranınızı çevirin."
+	},
+	hi: {
+		title: "अपना डिवाइस घुमाएं",
+		message: "यह गेम केवल लैंडस्केप मोड में काम करता है। जारी रखने के लिए कृपया अपनी स्क्रीन घुमाएं।"
+	}
+};
+
+function resolveOrientationLocale() {
+	var preferred = [];
+
+	if (navigator.languages && navigator.languages.length) {
+		preferred = Array.prototype.slice.call(navigator.languages);
+	}
+
+	if (navigator.language) {
+		preferred.push(navigator.language);
+	}
+
+	preferred.push("en");
+
+	for (var i = 0; i < preferred.length; i++) {
+		var code = String(preferred[i]).toLowerCase();
+
+		if (orientationMessages[code]) {
+			return code;
+		}
+
+		var prefix = code.split("-")[0];
+
+		if (orientationMessages[prefix]) {
+			return prefix;
+		}
+	}
+
+	return "en";
+}
+
+function applyOrientationLocale() {
+	var locale = resolveOrientationLocale();
+	var messages = orientationMessages[locale] || orientationMessages.en;
+	var title = document.querySelector(".orientation-overlay__title");
+	var message = document.querySelector(".orientation-overlay__message");
+
+	if (title) {
+		title.textContent = messages.title;
+	}
+
+	if (message) {
+		message.textContent = messages.message;
+	}
+
+	document.documentElement.lang = locale;
+}
+
+function isPortraitMode() {
+	return window.innerWidth < window.innerHeight;
+}
+
+function updateOrientationOverlay() {
+	var overlay = document.getElementById("orientation-overlay");
+	if (!overlay) {
+		return;
+	}
+
+	if (isPortraitMode()) {
+		overlay.hidden = false;
+		document.body.classList.add("orientation-locked");
+	} else {
+		overlay.hidden = true;
+		document.body.classList.remove("orientation-locked");
+	}
+}
+
+window.addEventListener("resize", updateOrientationOverlay);
+window.addEventListener("orientationchange", updateOrientationOverlay);
+document.addEventListener("DOMContentLoaded", function () {
+	applyOrientationLocale();
+	updateOrientationOverlay();
+});
 var isDoubleJump = true;
 var hasCannonPower = false;
 var renderer;
@@ -41,6 +177,7 @@ getOS();
 var db;
 var tempdata;
 window.addEventListener('load', function () {
+	updateOrientationOverlay();
 
 	window.indexedDB = window.indexedDB || window.mozIndexedDB ||
 		window.webkitIndexedDB || window.msIndexedDB;
@@ -142,6 +279,7 @@ window.addEventListener('load', function () {
 
 
    function crearjuego(tempdata){
+	updateOrientationOverlay();
 //	console.log("window.innerWidth " + window.innerWidth) ;
 	if(window.innerWidth > window.innerHeight){
 		if(window.innerWidth>=1600){
@@ -167,7 +305,7 @@ window.addEventListener('load', function () {
 		scale: {
 			mode: Phaser.Scale.FIT,
 			autoCenter: Phaser.Scale.CENTER_BOTH,
-			orientation: "portrait",
+			orientation: Phaser.Scale.LANDSCAPE,
 		},
 		physics: {
 			default: "arcade",

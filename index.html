@@ -35,9 +35,19 @@
   </head>
   <body>
 
+    <div id="orientation-overlay" class="orientation-overlay" aria-live="polite" hidden>
+      <div class="orientation-overlay__content">
+        <div class="orientation-overlay__icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="8" width="36" height="48" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M22 32h20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M44 24l8-8M44 40l8 8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h1 class="orientation-overlay__title">Rotate your device</h1>
+        <p class="orientation-overlay__message">This game only works in landscape mode. Please rotate your screen to continue.</p>
+      </div>
+    </div>
 
-
-
-  
   </body>
 </html>

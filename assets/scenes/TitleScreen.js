@@ -254,6 +254,13 @@ class TitleScreen extends Phaser.Scene {
 
 
 	enterPressed() {
+		if (typeof isPortraitMode === "function" && isPortraitMode()) {
+			if (typeof updateOrientationOverlay === "function") {
+				updateOrientationOverlay();
+			}
+			return;
+		}
+
 	//	console.log(this);
 
 
